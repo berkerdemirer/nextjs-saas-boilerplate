@@ -1,4 +1,4 @@
-import { config } from '@/config';
+import { config } from '@/app-config';
 import { Header } from '@/app/dashboard/_components/header';
 import { Sidebar } from '@/app/dashboard/_components/sidebar';
 import { SidebarInset, SidebarProvider } from '@/components/ui/sidebar';

@@ -1,6 +1,6 @@
 'use client';
 
-import { config } from '@/config';
+import { config } from '@/app-config';
 import { IconInnerShadowTop } from '@tabler/icons-react';
 import * as React from 'react';
 import { Nav } from '@/app/dashboard/_components/nav';
