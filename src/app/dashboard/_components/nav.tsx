@@ -1,9 +1,10 @@
 'use client';
 
+import { NavItem } from '@/types/dashboard-nav-item';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import * as React from 'react';
-import { DynamicIcon, IconType } from '@/components/ui/icons';
+import { DynamicIcon } from '@/components/ui/icons';
 import {
   SidebarGroup,
   SidebarGroupContent,
@@ -13,11 +14,7 @@ import {
 } from '@/components/ui/sidebar';
 
 interface NavProps extends React.ComponentPropsWithoutRef<typeof SidebarGroup> {
-  items: {
-    title: string;
-    url: string;
-    icon?: IconType;
-  }[];
+  items: Array<NavItem>;
   showTooltips?: boolean;
 }
 

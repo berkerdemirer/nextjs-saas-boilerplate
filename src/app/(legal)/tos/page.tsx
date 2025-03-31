@@ -1,3 +1,4 @@
+import { config } from '@/app-config';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export default function TermsOfService() {
@@ -21,11 +22,11 @@ export default function TermsOfService() {
               1. Introduction and Acceptance
             </h2>
             <p>
-              Welcome to [Your Service Name] (the "Service"), operated by [Your
-              Company Name] ("we," "us," or "our"). By accessing or using our
-              Service, you agree to be bound by these Terms of Service (the
-              "Terms"). If you do not agree to all the terms and conditions of
-              this agreement, you may not access or use the Service.
+              Welcome to {config.appName} (the "Service"), operated by{' '}
+              {config.company?.name} ("we," "us," or "our"). By accessing or
+              using our Service, you agree to be bound by these Terms of Service
+              (the "Terms"). If you do not agree to all the terms and conditions
+              of this agreement, you may not access or use the Service.
             </p>
           </section>
 
@@ -34,9 +35,9 @@ export default function TermsOfService() {
               2. Service Description
             </h2>
             <p>
-              [Your Service Name] is a software-as-a-service platform that
-              [briefly describe what your service does]. We provide this Service
-              subject to these Terms.
+              {config.appName} is a software-as-a-service platform that{' '}
+              {config.appDescription}. We provide this Service subject to these
+              Terms.
             </p>
           </section>
 
@@ -178,10 +179,10 @@ export default function TermsOfService() {
               9. Limitation of Liability
             </h2>
             <p>
-              To the maximum extent permitted by law, in no event shall [Your
-              Company Name], its directors, employees, partners, agents,
-              suppliers, or affiliates be liable for any indirect, incidental,
-              special, consequential, or punitive damages.
+              To the maximum extent permitted by law, in no event shall{' '}
+              {config.company?.name}, its directors, employees, partners,
+              agents, suppliers, or affiliates be liable for any indirect,
+              incidental, special, consequential, or punitive damages.
             </p>
           </section>
 
@@ -191,7 +192,7 @@ export default function TermsOfService() {
             </h2>
             <p>
               The Service is provided on an "as is" and "as available" basis.
-              [Your Company Name] expressly disclaims all warranties of any
+              {config.company?.name} expressly disclaims all warranties of any
               kind, whether express or implied.
             </p>
             <ul className="list-disc pl-6 space-y-2">
@@ -212,10 +213,10 @@ export default function TermsOfService() {
           <section>
             <h2 className="text-2xl font-semibold mb-2">11. Indemnification</h2>
             <p>
-              You agree to defend, indemnify, and hold harmless [Your Company
-              Name] and its affiliates from and against any claims, liabilities,
-              damages, losses, and expenses, including reasonable attorneys'
-              fees.
+              You agree to defend, indemnify, and hold harmless{' '}
+              {config.company?.name} and its affiliates from and against any
+              claims, liabilities, damages, losses, and expenses, including
+              reasonable attorneys' fees.
             </p>
           </section>
 
@@ -237,8 +238,8 @@ export default function TermsOfService() {
             </h2>
             <p>
               These Terms shall be governed by and construed in accordance with
-              the laws of [Your Jurisdiction]. Any dispute arising from these
-              Terms shall be resolved through [specify:
+              the laws of {config.company?.jurisdiction}. Any dispute arising
+              from these Terms shall be resolved through [specify:
               arbitration/mediation/courts in your jurisdiction].
             </p>
           </section>
@@ -250,8 +251,8 @@ export default function TermsOfService() {
             <h3 className="text-xl font-semibold mb-2">14.1 Governing Law</h3>
             <p>
               These Terms shall be governed by and construed in accordance with
-              the laws of [Your Jurisdiction], without regard to its conflict of
-              law provisions.
+              the laws of {config.company?.jurisdiction}, without regard to its
+              conflict of law provisions.
             </p>
             <h3 className="text-xl font-semibold mb-2">
               14.2 Dispute Resolution
@@ -298,13 +299,13 @@ export default function TermsOfService() {
               If you have any questions about these Terms of Service, please
               contact us at:
               <br />
-              [Your Company Name]
+              {config.company?.name}
               <br />
-              [Your Address]
+              {config.company?.address}
               <br />
-              [Your Email Address]
+              {config.company?.email}
               <br />
-              [Your Phone Number]
+              {config.company?.phone}
               <br />
               Last Updated: [Date]
             </p>

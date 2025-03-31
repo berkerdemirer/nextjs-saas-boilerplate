@@ -1,4 +1,4 @@
-import { LoginForm } from '@/app/(auth)/_components/login-form';
+import { SignupForm } from '@/app/(auth)/_components/signup-form';
 
 export default function Page() {
   return (
@@ -10,7 +10,7 @@ export default function Page() {
           </div>
           Acme Inc.
         </a>
-        <LoginForm />
+        <SignupForm />
       </div>
     </div>
   );

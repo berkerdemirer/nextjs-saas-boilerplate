@@ -1,14 +1,12 @@
 'use client';
 
+import { NavItem } from '@/types/dashboard-nav-item';
 import { usePathname } from 'next/navigation';
 import { Separator } from '@/components/ui/separator';
 import { SidebarTrigger } from '@/components/ui/sidebar';
 
 interface HeaderProps {
-  items: {
-    title: string;
-    url: string;
-  }[];
+  items: Array<NavItem>;
 }
 
 export function Header({ items }: HeaderProps) {
