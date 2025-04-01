@@ -1,6 +1,7 @@
 import { appConfig } from '@/app-config';
 import { createMetadata } from '@/utils/createMetadata';
 import localFont from 'next/font/local';
+import { ThemeProvider } from '@/components/theme-provider';
 import { Toaster } from '@/components/ui/sonner';
 import './globals.css';
 
@@ -29,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <script
           defer
@@ -38,7 +39,14 @@ export default function RootLayout({
         ></script>
       </head>
       <body className={`${GeistSans.variable} ${GeistMono.variable} font-sans`}>
-        <main>{children}</main>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
         <Toaster />
       </body>
     </html>

@@ -2,6 +2,7 @@
 
 import { NavItem } from '@/types/dashboard-nav-item';
 import { usePathname } from 'next/navigation';
+import { ThemeToggle } from '@/components/theme-toggle';
 import { Separator } from '@/components/ui/separator';
 import { SidebarTrigger } from '@/components/ui/sidebar';
 
@@ -22,6 +23,10 @@ export function Header({ items }: HeaderProps) {
           className="mx-2 data-[orientation=vertical]:h-4"
         />
         <h1 className="text-base font-medium">{currentTitle}</h1>
+
+        <div className="ml-auto">
+          <ThemeToggle />
+        </div>
       </div>
     </header>
   );
