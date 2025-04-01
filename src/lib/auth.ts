@@ -1,15 +1,16 @@
+import { appConfig } from '@/app-config';
 import { db } from '@/db';
 import { account, session, user, verification } from '@/db/schema';
 import { stripe } from '@better-auth/stripe';
 import { betterAuth } from 'better-auth';
 import { drizzleAdapter } from 'better-auth/adapters/drizzle';
 import { nextCookies } from 'better-auth/next-js';
+import { toast } from 'sonner';
 import Stripe from 'stripe';
 import { resetPasswordEmail } from '@/components/email-templates/reset-password';
 import { verifyEmail } from '@/components/email-templates/verify-email';
 import { welcomeEmail } from '@/components/email-templates/welcome';
 import { sendEmail } from '@/lib/resend';
-import { PROFESSION_PRICE_ID, STARTER_PRICE_ID } from '@/lib/stripe';
 
 export const auth = betterAuth({
   database: drizzleAdapter(db, {
@@ -76,13 +77,15 @@ export const auth = betterAuth({
         plans: [
           {
             name: 'Starter',
-            priceId: STARTER_PRICE_ID.default,
-            annualDiscountPriceId: STARTER_PRICE_ID.annual,
+            priceId: appConfig.stripe?.subscription?.starter.priceIds.default,
+            annualDiscountPriceId:
+              appConfig.stripe?.subscription?.starter.priceIds.annual,
           },
           {
             name: 'Professional',
-            priceId: PROFESSION_PRICE_ID.default,
-            annualDiscountPriceId: PROFESSION_PRICE_ID.annual,
+            priceId: appConfig.stripe?.subscription?.pro.priceIds.default,
+            annualDiscountPriceId:
+              appConfig.stripe?.subscription?.pro.priceIds.annual,
           },
         ],
       },

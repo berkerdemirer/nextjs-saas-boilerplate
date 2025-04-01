@@ -1,3 +1,4 @@
+import { appConfig } from '@/app-config';
 import { LoginForm } from '@/app/(auth)/_components/signin-form';
 
 export default function Page() {
@@ -8,7 +9,7 @@ export default function Page() {
           <div className="flex h-6 w-6 items-center justify-center rounded-md bg-primary text-primary-foreground">
             Logo
           </div>
-          Acme Inc.
+          {appConfig.appName}
         </a>
         <LoginForm />
       </div>

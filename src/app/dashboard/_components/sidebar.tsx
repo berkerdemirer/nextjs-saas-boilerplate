@@ -1,6 +1,6 @@
 'use client';
 
-import { config } from '@/app-config';
+import { appConfig } from '@/app-config';
 import { IconInnerShadowTop } from '@tabler/icons-react';
 import * as React from 'react';
 import { Nav } from '@/app/dashboard/_components/nav';
@@ -42,8 +42,11 @@ export function Sidebar({
         </SidebarMenu>
       </SidebarHeader>
       <SidebarContent>
-        <Nav items={config.dashboard.mainNavItems} showTooltips />
-        <Nav items={config.dashboard.secondaryNavItems} className="mt-auto" />
+        <Nav items={appConfig.dashboard.mainNavItems} showTooltips />
+        <Nav
+          items={appConfig.dashboard.secondaryNavItems}
+          className="mt-auto"
+        />
       </SidebarContent>
       <SidebarFooter>
         <NavUser user={userData} />

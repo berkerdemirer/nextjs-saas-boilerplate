@@ -1,5 +1,5 @@
 import { appConfig } from '@/app-config';
-import { SignupForm } from '@/app/(auth)/_components/signup-form';
+import { ForgetPasswordForm } from '@/app/(auth)/_components/forget-password-form';
 
 export default function Page() {
   return (
@@ -11,7 +11,7 @@ export default function Page() {
           </div>
           {appConfig.appName}
         </a>
-        <SignupForm />
+        <ForgetPasswordForm />
       </div>
     </div>
   );

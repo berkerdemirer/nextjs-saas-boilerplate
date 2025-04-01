@@ -1,4 +1,4 @@
-import { config } from '@/app-config';
+import { appConfig } from '@/app-config';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export default function PrivacyPolicy() {
@@ -7,7 +7,7 @@ export default function PrivacyPolicy() {
       <Card>
         <CardHeader>
           <CardTitle className="text-3xl font-bold">
-            Privacy Policy Template for {config.appName}
+            Privacy Policy Template for {appConfig.appName}
           </CardTitle>
           <p className="text-muted-foreground mt-4">
             This comprehensive privacy policy template is designed specifically
@@ -20,9 +20,9 @@ export default function PrivacyPolicy() {
           <section>
             <h2 className="text-2xl font-semibold mb-2">Introduction</h2>
             <p>
-              This Privacy Policy explains how {config.company?.name} ("we,"
+              This Privacy Policy explains how {appConfig.company?.name} ("we,"
               "us," or "our") collects, uses, shares, and protects your personal
-              information when you use our {config.appName} service (the
+              information when you use our {appConfig.appName} service (the
               "Service"). By accessing or using our Service, you acknowledge
               that you have read, understood, and agree to the practices
               described in this Privacy Policy.
@@ -224,7 +224,7 @@ export default function PrivacyPolicy() {
             </ul>
             <p className="mt-2">
               To exercise any of these rights, please contact us at{' '}
-              {config.company?.email}.
+              {appConfig.company?.email}.
             </p>
           </section>
 
@@ -273,13 +273,13 @@ export default function PrivacyPolicy() {
               If you have any questions about this Privacy Policy or our privacy
               practices, please contact us at:
               <br />
-              {config.appName}
+              {appConfig.appName}
               <br />
-              {config.company?.address}
+              {appConfig.company?.address}
               <br />
-              {config.company?.email}
+              {appConfig.company?.email}
               <br />
-              {config.company?.phone}
+              {appConfig.company?.phone}
               <br />
               This Privacy Policy was last updated on [Date].
             </p>

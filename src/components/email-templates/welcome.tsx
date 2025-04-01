@@ -1,3 +1,4 @@
+import { appConfig } from '@/app-config';
 import {
   Body,
   Container,
@@ -14,7 +15,7 @@ interface WelcomeEmailProps {
 }
 
 const WelcomeEmail = ({ username }: WelcomeEmailProps) => {
-  const previewText = `Welcome to`;
+  const previewText = `Welcome to ${appConfig.appName}!`;
   return (
     <Html>
       <Head />
@@ -23,7 +24,7 @@ const WelcomeEmail = ({ username }: WelcomeEmailProps) => {
         <Body className="bg-white my-auto mx-auto font-sans px-2">
           <Container className="border border-solid border-[#eaeaea] rounded my-[40px] mx-auto p-[20px] max-w-[465px]">
             <Heading className="text-black text-[24px] font-normal text-center p-0 my-[30px] mx-0">
-              Welcome to <strong>Better Auth</strong>!
+              Welcome to <strong>{appConfig.appName}</strong>!
             </Heading>
             <Text className="text-black text-[14px] leading-[24px]">
               Hello {username},

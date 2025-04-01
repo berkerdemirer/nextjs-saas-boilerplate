@@ -1,7 +1,15 @@
 import { appConfig } from '@/app-config';
-import { SignupForm } from '@/app/(auth)/_components/signup-form';
+import { ResetPasswordForm } from '@/app/(auth)/_components/reset-password-form';
 
-export default function Page() {
+export default function Page({
+  searchParams,
+}: {
+  searchParams: { token?: string };
+}) {
+  if (!searchParams.token) {
+    return <div>Invalid or missing reset token</div>;
+  }
+
   return (
     <div className="flex min-h-svh flex-col items-center justify-center gap-6 bg-muted p-6 md:p-10">
       <div className="flex w-full max-w-sm flex-col gap-6">
@@ -11,7 +19,7 @@ export default function Page() {
           </div>
           {appConfig.appName}
         </a>
-        <SignupForm />
+        <ResetPasswordForm token={searchParams.token} />
       </div>
     </div>
   );

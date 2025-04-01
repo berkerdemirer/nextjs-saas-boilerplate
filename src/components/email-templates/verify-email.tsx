@@ -1,3 +1,4 @@
+import { appConfig } from '@/app-config';
 import {
   Body,
   Button,
@@ -19,7 +20,7 @@ interface VerifyEmailProps {
 }
 
 const VerifyEmail = ({ username, url }: VerifyEmailProps) => {
-  const previewText = `Reset your BetterAuth password`;
+  const previewText = `Reset your ${appConfig.appName} password`;
   return (
     <Html>
       <Head />
@@ -28,14 +29,14 @@ const VerifyEmail = ({ username, url }: VerifyEmailProps) => {
         <Body className="bg-white my-auto mx-auto font-sans px-2">
           <Container className="border border-solid border-[#eaeaea] rounded my-[40px] mx-auto p-[20px] max-w-[465px]">
             <Heading className="text-black text-[24px] font-normal text-center p-0 my-[30px] mx-0">
-              Verify your <strong>Better Auth</strong> email
+              Verify your <strong>{appConfig.appName}</strong> email
             </Heading>
             <Text className="text-black text-[14px] leading-[24px]">
               Hello {username},
             </Text>
             <Text className="text-black text-[14px] leading-[24px]">
-              Thank you for registering with Better Auth. To complete your
-              registration, please verify your email address.
+              Thank you for registering with {appConfig.appName}. To complete
+              your registration, please verify your email address.
             </Text>
             <Section className="text-center mt-[32px] mb-[32px]">
               <Button

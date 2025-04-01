@@ -1,0 +1,97 @@
+'use client';
+
+import { zodResolver } from '@hookform/resolvers/zod';
+import { toast } from 'sonner';
+import { z } from 'zod';
+import { useCallback, useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { InputField } from '@/components/form/Input-field';
+import { Form } from '@/components/form/form';
+import { Button } from '@/components/ui/button';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
+import { forgetPassword } from '@/lib/auth-client';
+
+const schema = z.object({
+  email: z.string().email('Please enter a valid email address'),
+});
+
+type FormData = z.infer<typeof schema>;
+
+export function ForgetPasswordForm() {
+  const [isEmailSent, setIsEmailSent] = useState(false);
+
+  const form = useForm<FormData>({
+    resolver: zodResolver(schema),
+    defaultValues: {
+      email: '',
+    },
+  });
+
+  const onSubmit = useCallback(async (data: FormData) => {
+    await forgetPassword({
+      email: data.email,
+      redirectTo: '/reset-password',
+      fetchOptions: {
+        onSuccess: () => {
+          toast.success('Password reset link sent to your email');
+          setIsEmailSent(true);
+        },
+      },
+    });
+  }, []);
+
+  return (
+    <Card>
+      <CardHeader>
+        <CardTitle>
+          {isEmailSent ? 'Check Your Email' : 'Forgot Password?'}
+        </CardTitle>
+        <CardDescription>
+          {isEmailSent
+            ? `We've sent a password reset link to ${form.getValues('email')}`
+            : 'Enter your email to reset your password'}
+        </CardDescription>
+      </CardHeader>
+      <CardContent>
+        {isEmailSent ? (
+          <div className="text-muted-foreground space-y-6 text-sm">
+            <p>
+              Please check your inbox and follow the instructions to reset your
+              password.
+            </p>
+            <p>
+              Didn't receive an email?{' '}
+              <Button
+                variant="link"
+                className="p-0 h-auto font-normal"
+                onClick={() => setIsEmailSent(false)}
+              >
+                Try again
+              </Button>
+            </p>
+          </div>
+        ) : (
+          <Form form={form} onSubmit={onSubmit}>
+            <div className="flex flex-col gap-4">
+              <InputField
+                name="email"
+                label="Email"
+                type="email"
+                placeholder="Enter your email"
+              />
+              <Button type="submit" disabled={form.formState.isSubmitting}>
+                {form.formState.isSubmitting ? 'Sending...' : 'Send Reset Link'}
+              </Button>
+            </div>
+          </Form>
+        )}
+      </CardContent>
+    </Card>
+  );
+}

@@ -1,4 +1,4 @@
-import { config } from '@/app-config';
+import { appConfig } from '@/app-config';
 import { Header } from '@/app/dashboard/_components/header';
 import { Sidebar } from '@/app/dashboard/_components/sidebar';
 import { SidebarInset, SidebarProvider } from '@/components/ui/sidebar';
@@ -17,8 +17,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <SidebarInset>
         <Header
           items={[
-            ...config.dashboard.mainNavItems,
-            ...config.dashboard.secondaryNavItems,
+            ...appConfig.dashboard.mainNavItems,
+            ...appConfig.dashboard.secondaryNavItems,
           ]}
         />
         <div className="flex flex-1 flex-col">
