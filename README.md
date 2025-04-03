@@ -48,6 +48,8 @@ Follow these steps to get your development environment up and running:
     - `NEXT_PUBLIC_APP_URL`: The base URL of your application (e.g., `http://localhost:3000`).
     - `RESEND_API_KEY`: Your API key from [Resend](https://resend.com/) for sending emails.
     - `SENTRY_AUTH_TOKEN`: Your auth token if using [Sentry](https://sentry.io/) for error tracking.
+    - `GOOGLE_CLIENT_ID`: Your Google OAuth client ID for social login.
+    - `GOOGLE_CLIENT_SECRET`: Your Google OAuth client secret for social login.
 
 4.  **Run database migrations:**
     Apply the database schema:
@@ -80,6 +82,7 @@ Key features implemented:
 
 - **Database Integration:** Uses the `drizzleAdapter` with your PostgreSQL database (schema defined in `src/db/schema.ts`).
 - **Email & Password:** Standard email and password sign-up and sign-in are enabled.
+- **Social Login:** Google authentication is implemented for easy sign-in.
 - **Email Verification:**
   - Required for users signing up via email/password.
   - Verification emails are sent automatically on sign-up using the `src/components/email-templates/verify-email.tsx` template.
