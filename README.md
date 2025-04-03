@@ -35,17 +35,13 @@ Follow these steps to get your development environment up and running:
     ```
 
 3.  **Set up environment variables:**
-    Copy the example environment file and fill in your specific configuration details:
-
-    ```bash
-    cp .env.example .env
-    ```
 
     You'll need to provide values for:
 
     - `DATABASE_URL`: Your PostgreSQL connection string.
     - `BETTER_AUTH_SECRET`: A secret key for authentication.
-    - `NEXT_PUBLIC_APP_URL`: The base URL of your application (e.g., `http://localhost:3000`).
+    - `STRIPE_KEY`: Stripe key
+    - `STRIPE_WEBHOOK_SECRET`: Webhook secret
     - `RESEND_API_KEY`: Your API key from [Resend](https://resend.com/) for sending emails.
     - `SENTRY_AUTH_TOKEN`: Your auth token if using [Sentry](https://sentry.io/) for error tracking.
     - `GOOGLE_CLIENT_ID`: Your Google OAuth client ID for social login.
