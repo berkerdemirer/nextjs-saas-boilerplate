@@ -47,7 +47,6 @@ Follow these steps to get your development environment up and running:
     - `BETTER_AUTH_SECRET`: A secret key for authentication.
     - `NEXT_PUBLIC_APP_URL`: The base URL of your application (e.g., `http://localhost:3000`).
     - `RESEND_API_KEY`: Your API key from [Resend](https://resend.com/) for sending emails.
-    - `EMAIL_FROM`: The email address transactional emails will be sent from.
     - `SENTRY_AUTH_TOKEN`: Your auth token if using [Sentry](https://sentry.io/) for error tracking.
 
 4.  **Run database migrations:**
@@ -93,20 +92,6 @@ Key features implemented:
 - **Next.js Integration:** Uses the `nextCookies()` plugin for proper cookie handling within the Next.js framework.
 
 You can customize email templates, authentication flows, and plugin configurations by modifying `src/lib/auth.ts` and the referenced email template components.
-
-## Available Scripts
-
-This boilerplate includes several useful scripts defined in `package.json`:
-
-- `npm run dev`: Starts the development server with Turbopack.
-- `npm run build`: Builds the application for production.
-- `npm run start`: Starts the production server.
-- `npm run lint`: Lints the codebase using Next.js ESLint configuration.
-- `npm run auth:generate`: Generates authentication files using Better Auth CLI.
-- `npm run db:generate`: Generates Drizzle ORM migration files based on schema changes.
-- `npm run db:migrate`: Applies pending database migrations.
-- `npm run db:seed`: Seeds the database with initial data (if `src/db/seed.ts` is configured).
-- `npm run db:studio`: Opens Drizzle Studio to browse your database.
 
 ## Learn More
 
