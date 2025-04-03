@@ -1,6 +1,7 @@
 'use client';
 
 import { zodResolver } from '@hookform/resolvers/zod';
+import { Loader2 } from 'lucide-react';
 import { toast } from 'sonner';
 import { z } from 'zod';
 import { useCallback, useState } from 'react';
@@ -25,6 +26,7 @@ type FormData = z.infer<typeof schema>;
 
 export function ForgetPasswordForm() {
   const [isEmailSent, setIsEmailSent] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const form = useForm<FormData>({
     resolver: zodResolver(schema),
@@ -41,6 +43,15 @@ export function ForgetPasswordForm() {
         onSuccess: () => {
           toast.success('Password reset link sent to your email');
           setIsEmailSent(true);
+        },
+        onResponse: () => {
+          setLoading(false);
+        },
+        onRequest: () => {
+          setLoading(true);
+        },
+        onError: (ctx) => {
+          toast.error(ctx.error.message);
         },
       },
     });
@@ -84,9 +95,14 @@ export function ForgetPasswordForm() {
                 label="Email"
                 type="email"
                 placeholder="Enter your email"
+                data-testid="email-field"
               />
-              <Button type="submit" disabled={form.formState.isSubmitting}>
-                {form.formState.isSubmitting ? 'Sending...' : 'Send Reset Link'}
+              <Button type="submit" className="w-full" disabled={loading}>
+                {loading ? (
+                  <Loader2 size={16} className="animate-spin" />
+                ) : (
+                  'Send reset link'
+                )}
               </Button>
             </div>
           </Form>

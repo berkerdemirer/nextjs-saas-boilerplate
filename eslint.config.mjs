@@ -1,5 +1,6 @@
 import { FlatCompat } from '@eslint/eslintrc';
 import eslintConfigPrettier from 'eslint-config-prettier';
+import reactHooks from 'eslint-plugin-react-hooks';
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -12,6 +13,7 @@ const compat = new FlatCompat({
 
 const eslintConfig = [
   ...compat.extends('next/core-web-vitals', 'next/typescript'),
+  reactHooks.configs['recommended-latest'],
   eslintConfigPrettier,
 ];
 

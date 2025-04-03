@@ -8,7 +8,6 @@
     "start": "next start",
     "lint": "next lint",
     "auth:generate": "npx @better-auth/cli generate",
-    "test:e2e": "npx playwright test",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "tsx src/db/migrate.ts",
     "db:seed": "tsx src/db/seed.ts",
@@ -51,7 +50,6 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@playwright/test": "^1.51.1",
     "@tailwindcss/postcss": "^4",
     "@trivago/prettier-plugin-sort-imports": "^5.2.2",
     "@types/node": "^20",
@@ -62,6 +60,7 @@
     "eslint": "^9",
     "eslint-config-next": "15.2.4",
     "eslint-config-prettier": "^10.0.2",
+    "eslint-plugin-react-hooks": "^5.2.0",
     "prettier": "3.4.2",
     "tailwindcss": "^4",
     "tsx": "^4.19.3",

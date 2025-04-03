@@ -5,7 +5,6 @@ import { stripe } from '@better-auth/stripe';
 import { betterAuth } from 'better-auth';
 import { drizzleAdapter } from 'better-auth/adapters/drizzle';
 import { nextCookies } from 'better-auth/next-js';
-import { toast } from 'sonner';
 import Stripe from 'stripe';
 import { resetPasswordEmail } from '@/components/email-templates/reset-password';
 import { verifyEmail } from '@/components/email-templates/verify-email';
@@ -39,7 +38,7 @@ export const auth = betterAuth({
   },
   emailAndPassword: {
     enabled: true,
-    autoSignIn: true,
+    requireEmailVerification: true,
     async sendResetPassword({ user, url }) {
       await sendEmail({
         to: user.email,
@@ -69,7 +68,7 @@ export const auth = betterAuth({
   plugins: [
     nextCookies(),
     stripe({
-      stripeClient: new Stripe(process.env.STRIPE_KEY || 'sk_test_'),
+      stripeClient: new Stripe(process.env.STRIPE_KEY!),
       stripeWebhookSecret: process.env.STRIPE_WEBHOOK_SECRET!,
       createCustomerOnSignUp: true,
       subscription: {

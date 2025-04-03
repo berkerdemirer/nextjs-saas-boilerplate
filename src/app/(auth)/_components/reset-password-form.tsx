@@ -1,10 +1,11 @@
 'use client';
 
 import { zodResolver } from '@hookform/resolvers/zod';
+import { Loader2 } from 'lucide-react';
 import { toast } from 'sonner';
 import { z } from 'zod';
 import { useRouter } from 'next/navigation';
-import { useCallback } from 'react';
+import { useCallback, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { InputField } from '@/components/form/Input-field';
 import { Form } from '@/components/form/form';
@@ -43,22 +44,26 @@ export function ResetPasswordForm({ token }: ResetPasswordFormProps) {
       confirmPassword: '',
     },
   });
+  const [loading, setLoading] = useState(false);
 
-  const onSubmit = useCallback(
-    async (data: FormData) => {
-      await resetPassword({
-        newPassword: data.password,
-        token,
-        fetchOptions: {
-          onSuccess: () => {
-            toast.success('Password reset successfully');
-            router.push('/signin');
-          },
+  const onSubmit = useCallback(async (data: FormData) => {
+    await resetPassword({
+      newPassword: data.password,
+      token,
+      fetchOptions: {
+        onSuccess: () => {
+          toast.success('Password reset successfully');
+          router.push('/signin');
         },
-      });
-    },
-    [token, router],
-  );
+        onRequest: () => {
+          setLoading(true);
+        },
+        onError: (ctx) => {
+          toast.error(ctx.error.message);
+        },
+      },
+    });
+  }, []);
 
   return (
     <Card>
@@ -74,15 +79,21 @@ export function ResetPasswordForm({ token }: ResetPasswordFormProps) {
               label="New Password"
               type="password"
               placeholder="Enter your new password"
+              datatest-id="password-field"
             />
             <InputField
               name="confirmPassword"
               label="Confirm Password"
               type="password"
               placeholder="Confirm your new password"
+              data-testid="confirm-password-field"
             />
-            <Button type="submit" disabled={form.formState.isSubmitting}>
-              {form.formState.isSubmitting ? 'Resetting...' : 'Reset Password'}
+            <Button type="submit" className="w-full" disabled={loading}>
+              {loading ? (
+                <Loader2 size={16} className="animate-spin" />
+              ) : (
+                'Reset password'
+              )}
             </Button>
           </div>
         </Form>
