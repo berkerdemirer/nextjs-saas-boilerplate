@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { ThemeToggle } from '@/components/theme-toggle';
 import { Button } from '@/components/ui/button';
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
       <header className="w-full border-b py-4 px-6 flex justify-between items-center">
         <div className="font-bold text-xl">Saas Boilerplate</div>
         <div className="flex gap-2">
+          <ThemeToggle />
           <Button variant="outline" asChild>
             <Link href="/signin">Sign In</Link>
           </Button>
