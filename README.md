@@ -105,3 +105,11 @@ To learn more about the technologies used in this boilerplate, refer to their re
 - [Better Auth Documentation](https://better-auth.dev/docs)
 - [Shadcn/ui Documentation](https://ui.shadcn.com/docs)
 - [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+
+## Analytics
+
+This boilerplate includes [Umami](https://umami.is/) for privacy-friendly analytics. The tracking script is configured in `src/app/layout.tsx`. You can:
+
+- Replace it with your own Umami instance by updating the script source and website ID
+- Switch to an alternative analytics solution like [Plausible](https://plausible.io/)
+- Remove the analytics script entirely if not needed

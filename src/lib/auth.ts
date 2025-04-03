@@ -21,6 +21,13 @@ export const auth = betterAuth({
       enabled: true,
     },
   },
+  rateLimit: {
+    enabled: true,
+    window: 10,
+    max: 100,
+    storage: 'memory',
+    modelName: 'rateLimit',
+  },
   emailVerification: {
     callbackUrl: '/dashboard',
     autoSignInAfterVerification: true,
