@@ -12,7 +12,7 @@ export const {
   forgetPassword,
   resetPassword,
 } = createAuthClient({
-  baseURL: appConfig.apiUrl,
+  baseURL: appConfig.appUrl,
   plugins: [
     stripeClient({
       subscription: true,

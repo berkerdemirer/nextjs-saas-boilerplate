@@ -1,4 +1,4 @@
-import { Config } from '@/types/config';
+import { Config } from '@/types';
 
 export const appConfig: Config = {
   appName: 'My App',
