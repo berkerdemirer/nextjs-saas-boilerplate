@@ -22,11 +22,12 @@ export default function TermsOfService() {
               1. Introduction and Acceptance
             </h2>
             <p>
-              Welcome to {appConfig.appName} (the "Service"), operated by{' '}
-              {appConfig.company?.name} ("we," "us," or "our"). By accessing or
-              using our Service, you agree to be bound by these Terms of Service
-              (the "Terms"). If you do not agree to all the terms and conditions
-              of this agreement, you may not access or use the Service.
+              Welcome to {appConfig.appName} (the &quot;Service&quot;), operated
+              by {appConfig.company?.name} (&quot;we,&quot; &quot;us,&quot; or
+              &quot;our&quot;). By accessing or using our Service, you agree to
+              be bound by these Terms of Service (the &quot;Terms&quot;). If you
+              do not agree to all the terms and conditions of this agreement,
+              you may not access or use the Service.
             </p>
           </section>
 
@@ -191,9 +192,9 @@ export default function TermsOfService() {
               10. Disclaimer of Warranties
             </h2>
             <p>
-              The Service is provided on an "as is" and "as available" basis.
-              {appConfig.company?.name} expressly disclaims all warranties of
-              any kind, whether express or implied.
+              The Service is provided on an &quot;as is&quot; and &quot;as
+              available&quot; basis. {appConfig.company?.name} expressly
+              disclaims all warranties of any kind, whether express or implied.
             </p>
             <ul className="list-disc pl-6 space-y-2">
               <li>
@@ -216,7 +217,7 @@ export default function TermsOfService() {
               You agree to defend, indemnify, and hold harmless{' '}
               {appConfig.company?.name} and its affiliates from and against any
               claims, liabilities, damages, losses, and expenses, including
-              reasonable attorneys' fees.
+              reasonable attorneys&apos; fees.
             </p>
           </section>
 

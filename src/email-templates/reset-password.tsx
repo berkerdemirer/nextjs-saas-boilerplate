@@ -39,8 +39,8 @@ const ResetPasswordEmail = ({
             </Text>
             <Text className="text-black text-[14px] leading-[24px]">
               We received a request to reset your password for your{' '}
-              {appConfig.appName} account. account. If you didn't make this
-              request, you can safely ignore this email.
+              {appConfig.appName} account. If you didn&apos;t make this request,
+              you can safely ignore this email.
             </Text>
             <Section className="text-center mt-[32px] mb-[32px]">
               <Button
@@ -58,8 +58,8 @@ const ResetPasswordEmail = ({
             </Text>
             <Hr className="border border-solid border-[#eaeaea] my-[26px] mx-0 w-full" />
             <Text className="text-[#666666] text-[12px] leading-[24px]">
-              If you didn't request a password reset, please ignore this email
-              or contact support if you have concerns.
+              If you didn&apos;t request a password reset, please ignore this
+              email or contact support if you have concerns.
             </Text>
           </Container>
         </Body>

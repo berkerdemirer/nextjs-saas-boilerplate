@@ -77,7 +77,7 @@ export function ForgetPasswordForm() {
               password.
             </p>
             <p>
-              Didn't receive an email?{' '}
+              Didn&apos;t receive an email?{' '}
               <Button
                 variant="link"
                 className="p-0 h-auto font-normal"

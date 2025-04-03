@@ -54,7 +54,8 @@ const VerifyEmail = ({ username, url }: VerifyEmailProps) => {
             </Text>
             <Hr className="border border-solid border-[#eaeaea] my-[26px] mx-0 w-full" />
             <Text className="text-[#666666] text-[12px] leading-[24px]">
-              If you didn't register for an account, please ignore this email
+              If you didn&apos;t register for an account, please ignore this
+              email
             </Text>
           </Container>
         </Body>

@@ -46,24 +46,27 @@ export function ResetPasswordForm({ token }: ResetPasswordFormProps) {
   });
   const [loading, setLoading] = useState(false);
 
-  const onSubmit = useCallback(async (data: FormData) => {
-    await resetPassword({
-      newPassword: data.password,
-      token,
-      fetchOptions: {
-        onSuccess: () => {
-          toast.success('Password reset successfully');
-          router.push('/signin');
+  const onSubmit = useCallback(
+    async (data: FormData) => {
+      await resetPassword({
+        newPassword: data.password,
+        token,
+        fetchOptions: {
+          onSuccess: () => {
+            toast.success('Password reset successfully');
+            router.push('/signin');
+          },
+          onRequest: () => {
+            setLoading(true);
+          },
+          onError: (ctx) => {
+            toast.error(ctx.error.message);
+          },
         },
-        onRequest: () => {
-          setLoading(true);
-        },
-        onError: (ctx) => {
-          toast.error(ctx.error.message);
-        },
-      },
-    });
-  }, []);
+      });
+    },
+    [token, router],
+  );
 
   return (
     <Card>

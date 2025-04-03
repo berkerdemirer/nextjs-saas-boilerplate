@@ -20,12 +20,13 @@ export default function PrivacyPolicy() {
           <section>
             <h2 className="text-2xl font-semibold mb-2">Introduction</h2>
             <p>
-              This Privacy Policy explains how {appConfig.company?.name} ("we,"
-              "us," or "our") collects, uses, shares, and protects your personal
-              information when you use our {appConfig.appName} service (the
-              "Service"). By accessing or using our Service, you acknowledge
-              that you have read, understood, and agree to the practices
-              described in this Privacy Policy.
+              This Privacy Policy explains how {appConfig.company?.name} (
+              &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) collects,
+              uses, shares, and protects your personal information when you use
+              our {appConfig.appName} service (the &quot;Service&quot;). By
+              accessing or using our Service, you acknowledge that you have
+              read, understood, and agree to the practices described in this
+              Privacy Policy.
             </p>
           </section>
 
@@ -243,7 +244,9 @@ export default function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-2">Children's Privacy</h2>
+            <h2 className="text-2xl font-semibold mb-2">
+              Children&apos;s Privacy
+            </h2>
             <p className="mb-2">
               Our Service is not directed to children under the age of 13 (or
               the applicable age of digital consent in your jurisdiction). We do
@@ -260,10 +263,10 @@ export default function PrivacyPolicy() {
             </h2>
             <p className="mb-2">
               We may update this Privacy Policy from time to time. The updated
-              version will be indicated by an updated "Revised" date and will be
-              effective as soon as it is accessible. We encourage you to review
-              this Privacy Policy periodically to stay informed about our
-              information practices.
+              version will be indicated by an updated &quot;Revised&quot; date
+              and will be effective as soon as it is accessible. We encourage
+              you to review this Privacy Policy periodically to stay informed
+              about our information practices.
             </p>
           </section>
 
