@@ -1,14 +1,14 @@
 import { appConfig } from '@/app-config';
 import { db } from '@/db';
 import { account, session, user, verification } from '@/db/schema';
+import { resetPasswordEmail } from '@/email-templates/reset-password';
+import { verifyEmail } from '@/email-templates/verify-email';
+import { welcomeEmail } from '@/email-templates/welcome';
 import { stripe } from '@better-auth/stripe';
 import { betterAuth } from 'better-auth';
 import { drizzleAdapter } from 'better-auth/adapters/drizzle';
 import { nextCookies } from 'better-auth/next-js';
 import Stripe from 'stripe';
-import { resetPasswordEmail } from '@/components/email-templates/reset-password';
-import { verifyEmail } from '@/components/email-templates/verify-email';
-import { welcomeEmail } from '@/components/email-templates/welcome';
 import { sendEmail } from '@/lib/resend';
 
 export const auth = betterAuth({

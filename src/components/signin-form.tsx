@@ -2,13 +2,14 @@
 
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Loader2 } from 'lucide-react';
+import { toast } from 'sonner';
 import { z } from 'zod';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useCallback, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { InputField } from '@/components/form/Input-field';
-import { Form } from '@/components/form/form';
+import { Form } from '@/components/form';
+import { InputField } from '@/components/input-field';
 import { Button } from '@/components/ui/button';
 import {
   Card,
@@ -17,41 +18,31 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { signUp } from '@/lib/auth-client';
+import { signIn } from '@/lib/auth-client';
 
-const signupSchema = z
-  .object({
-    name: z.string(),
-    email: z.string().email('Please enter a valid email address'),
-    password: z
-      .string()
-      .min(6, 'Password must be at least 6 characters')
-      .max(50, 'Password must not exceed 50 characters'),
-    confirmPassword: z.string(),
-  })
-  .refine((data) => data.password === data.confirmPassword, {
-    message: "Passwords don't match",
-    path: ['confirmPassword'],
-  });
+const signInSchema = z.object({
+  email: z.string().email('Please enter a valid email address'),
+  password: z
+    .string()
+    .min(6, 'Password must be at least 6 characters')
+    .max(50, 'Password must not exceed 50 characters'),
+});
 
-type SignupFormValues = z.infer<typeof signupSchema>;
+type SignInFormValues = z.infer<typeof signInSchema>;
 
-export function SignupForm() {
+export function LoginForm() {
   const router = useRouter();
-  const form = useForm<SignupFormValues>({
-    resolver: zodResolver(signupSchema),
+  const form = useForm<SignInFormValues>({
+    resolver: zodResolver(signInSchema),
     defaultValues: {
-      name: '', // better-auth requires name but we can leave it empty.
       email: '',
       password: '',
-      confirmPassword: '',
     },
   });
   const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState(false);
 
-  const onSubmit = useCallback(async (data: SignupFormValues) => {
-    await signUp.email({
+  const onSubmit = useCallback(async (data: SignInFormValues) => {
+    await signIn.email({
       ...data,
       fetchOptions: {
         onResponse: () => {
@@ -61,44 +52,22 @@ export function SignupForm() {
           setLoading(true);
         },
         onError: (ctx) => {
-          console.error(ctx.error.message);
+          toast.error(ctx.error.message);
         },
         onSuccess: async () => {
-          setSuccess(true);
-          setTimeout(() => {
-            router.push('/signin');
-          }, 10000);
+          router.push('/dashboard');
         },
       },
     });
   }, []);
 
-  if (success) {
-    return (
-      <Card className="text-center">
-        <CardHeader>
-          <CardTitle>Registration Successful!</CardTitle>
-          <CardDescription>
-            We have sent a confirmation email to your address. Please check your
-            inbox and follow the instructions to verify your account.
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          <p className="text-sm text-muted-foreground">
-            You will be redirected to the login page in a few seconds...
-          </p>
-        </CardContent>
-      </Card>
-    );
-  }
-
   return (
     <>
       <Card>
         <CardHeader className="text-center">
-          <CardTitle className="text-xl">Create an account</CardTitle>
+          <CardTitle className="text-xl">Welcome back</CardTitle>
           <CardDescription>
-            Sign up with your Apple or Google account
+            Login with your Apple or Google account
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -107,7 +76,7 @@ export function SignupForm() {
               <Button
                 variant="outline"
                 className="w-full"
-                data-testid="apple-signup"
+                data-testid="apple-signin-btn"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                   <path
@@ -115,12 +84,12 @@ export function SignupForm() {
                     fill="currentColor"
                   />
                 </svg>
-                Sign up with Apple
+                Login with Apple
               </Button>
               <Button
                 variant="outline"
                 className="w-full"
-                data-testid="google-signup"
+                data-testid="google-signin-btn"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                   <path
@@ -128,7 +97,7 @@ export function SignupForm() {
                     fill="currentColor"
                   />
                 </svg>
-                Sign up with Google
+                Login with Google
               </Button>
             </div>
             <div className="after:border-border relative text-center text-sm after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-t">
@@ -150,29 +119,30 @@ export function SignupForm() {
               placeholder="Enter your password"
               data-testid="password-field"
             />
-            <InputField
-              name="confirmPassword"
-              label="Confirm Password"
-              type="password"
-              placeholder="Confirm your password"
-              data-testid="confirm-password-field"
-            />
             <Button
               type="submit"
               className="w-full"
               disabled={loading}
-              data-testid="email-signup-btn"
+              data-testid="email-signin-btn"
             >
               {loading ? (
                 <Loader2 size={16} className="animate-spin" />
               ) : (
-                'Sign up'
+                'Sign in'
               )}
             </Button>
             <div className="text-center text-sm">
-              Already have an account?{' '}
-              <Link href="/signin" className="underline underline-offset-4">
-                Login
+              Don&apos;t have an account?{' '}
+              <Link href="/signup" className="underline underline-offset-4">
+                Sign up
+              </Link>
+            </div>
+            <div className="text-center text-sm">
+              <Link
+                href="/forget-password"
+                className="ml-auto text-sm underline-offset-4 underline"
+              >
+                Forgot your password?
               </Link>
             </div>
           </Form>

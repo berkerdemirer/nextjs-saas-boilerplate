@@ -1,6 +1,6 @@
 'use client';
 
-import { NavItem } from '@/types/dashboard-nav-item';
+import { NavItem } from '@/types';
 import { usePathname } from 'next/navigation';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { Separator } from '@/components/ui/separator';

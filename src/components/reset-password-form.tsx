@@ -7,8 +7,8 @@ import { z } from 'zod';
 import { useRouter } from 'next/navigation';
 import { useCallback, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { InputField } from '@/components/form/Input-field';
-import { Form } from '@/components/form/form';
+import { Form } from '@/components/form';
+import { InputField } from '@/components/input-field';
 import { Button } from '@/components/ui/button';
 import {
   Card,

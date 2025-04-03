@@ -2,9 +2,10 @@
 
 import { appConfig } from '@/app-config';
 import { IconInnerShadowTop } from '@tabler/icons-react';
+import Link from 'next/link';
 import * as React from 'react';
-import { Nav } from '@/app/dashboard/_components/nav';
-import { NavUser } from '@/app/dashboard/_components/nav-user';
+import { Nav } from '@/components/dashboard-nav';
+import { NavUser } from '@/components/dashboard-nav-user';
 import {
   SidebarContent,
   SidebarFooter,
@@ -33,10 +34,10 @@ export function Sidebar({
               asChild
               className="data-[slot=sidebar-menu-button]:!p-1.5"
             >
-              <a href="#">
+              <Link href="#">
                 <IconInnerShadowTop className="!size-5" />
                 <span className="text-base font-semibold">Acme Inc.</span>
-              </a>
+              </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>

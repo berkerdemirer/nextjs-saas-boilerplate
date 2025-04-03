@@ -1,6 +1,6 @@
 import { appConfig } from '@/app-config';
-import { Header } from '@/app/dashboard/_components/header';
-import { Sidebar } from '@/app/dashboard/_components/sidebar';
+import { Header } from '@/components/dashboard-header';
+import { Sidebar } from '@/components/dashboard-sidebar';
 import { SidebarInset, SidebarProvider } from '@/components/ui/sidebar';
 
 export default function Layout({ children }: { children: React.ReactNode }) {

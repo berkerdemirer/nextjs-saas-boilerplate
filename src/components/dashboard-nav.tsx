@@ -1,6 +1,6 @@
 'use client';
 
-import { NavItem } from '@/types/dashboard-nav-item';
+import { NavItem } from '@/types';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import * as React from 'react';
