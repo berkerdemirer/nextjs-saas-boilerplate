@@ -18,7 +18,7 @@ export default function TermsOfService() {
         </CardHeader>
         <CardContent className="space-y-6">
           <section>
-            <h2 className="text-2xl font-semibold mb-2">
+            <h2 className="mb-2 text-2xl font-semibold">
               1. Introduction and Acceptance
             </h2>
             <p>
@@ -32,7 +32,7 @@ export default function TermsOfService() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-2">
+            <h2 className="mb-2 text-2xl font-semibold">
               2. Service Description
             </h2>
             <p>
@@ -43,10 +43,10 @@ export default function TermsOfService() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-2">
+            <h2 className="mb-2 text-2xl font-semibold">
               3. Account Registration and Security
             </h2>
-            <h3 className="text-xl font-semibold mb-2">3.1 Account Creation</h3>
+            <h3 className="mb-2 text-xl font-semibold">3.1 Account Creation</h3>
             <p>
               To use certain features of our Service, you may need to create an
               account. When registering for an account, you must provide
@@ -54,14 +54,14 @@ export default function TermsOfService() {
               for maintaining the confidentiality of your account credentials
               and for all activities that occur under your account.
             </p>
-            <h3 className="text-xl font-semibold mb-2">3.2 Account Security</h3>
+            <h3 className="mb-2 text-xl font-semibold">3.2 Account Security</h3>
             <p>
               You agree to notify us immediately of any unauthorized access to
               or use of your account. We cannot and will not be liable for any
               loss or damage arising from your failure to protect your login
               information, including your password.
             </p>
-            <h3 className="text-xl font-semibold mb-2">3.3 Age Restriction</h3>
+            <h3 className="mb-2 text-xl font-semibold">3.3 Age Restriction</h3>
             <p>
               The Service is intended for users who are at least 18 years of
               age. By using the Service, you confirm that you are at least 18
@@ -72,10 +72,10 @@ export default function TermsOfService() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-2">
+            <h2 className="mb-2 text-2xl font-semibold">
               4. Subscription and Payment Terms
             </h2>
-            <h3 className="text-xl font-semibold mb-2">
+            <h3 className="mb-2 text-xl font-semibold">
               4.1 Subscription Plans
             </h3>
             <p>
@@ -83,7 +83,7 @@ export default function TermsOfService() {
               pricing. The specific details of each plan are available on our
               pricing page.
             </p>
-            <h3 className="text-xl font-semibold mb-2">4.2 Free Trials</h3>
+            <h3 className="mb-2 text-xl font-semibold">4.2 Free Trials</h3>
             <p>
               We may offer free trial periods for certain subscription plans. At
               the end of the trial period, your account will automatically
@@ -93,20 +93,20 @@ export default function TermsOfService() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-2">
+            <h2 className="mb-2 text-2xl font-semibold">
               5. User Responsibilities and Conduct
             </h2>
-            <h3 className="text-xl font-semibold mb-2">5.1 Acceptable Use</h3>
+            <h3 className="mb-2 text-xl font-semibold">5.1 Acceptable Use</h3>
             <p className="mb-2">
               You agree to use the Service only for lawful purposes and in
               accordance with these Terms. You are responsible for all content
               and activity conducted under your account.
             </p>
-            <h3 className="text-xl font-semibold mb-2">
+            <h3 className="mb-2 text-xl font-semibold">
               5.2 Prohibited Activities
             </h3>
             <p className="mb-2">You agree not to:</p>
-            <ul className="list-disc pl-6 space-y-2">
+            <ul className="list-disc space-y-2 pl-6">
               <li>
                 Use the Service in any way that violates any applicable law or
                 regulation
@@ -131,10 +131,10 @@ export default function TermsOfService() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-2">
+            <h2 className="mb-2 text-2xl font-semibold">
               6. Intellectual Property Rights
             </h2>
-            <h3 className="text-xl font-semibold mb-2">
+            <h3 className="mb-2 text-xl font-semibold">
               6.1 Our Intellectual Property
             </h3>
             <p>
@@ -143,7 +143,7 @@ export default function TermsOfService() {
               and its licensors. The Service is protected by copyright,
               trademark, and other laws.
             </p>
-            <h3 className="text-xl font-semibold mb-2">6.2 Your Content</h3>
+            <h3 className="mb-2 text-xl font-semibold">6.2 Your Content</h3>
             <p>
               You retain all rights to any content you submit, post, or display
               on or through the Service. By submitting content to the Service,
@@ -154,7 +154,7 @@ export default function TermsOfService() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-2">7. Data Privacy</h2>
+            <h2 className="mb-2 text-2xl font-semibold">7. Data Privacy</h2>
             <p>
               We collect and process your personal information in accordance
               with our Privacy Policy, which is incorporated into these Terms by
@@ -164,7 +164,7 @@ export default function TermsOfService() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-2">
+            <h2 className="mb-2 text-2xl font-semibold">
               8. Third-Party Links and Services
             </h2>
             <p>
@@ -176,7 +176,7 @@ export default function TermsOfService() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-2">
+            <h2 className="mb-2 text-2xl font-semibold">
               9. Limitation of Liability
             </h2>
             <p>
@@ -188,7 +188,7 @@ export default function TermsOfService() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-2">
+            <h2 className="mb-2 text-2xl font-semibold">
               10. Disclaimer of Warranties
             </h2>
             <p>
@@ -196,7 +196,7 @@ export default function TermsOfService() {
               available&quot; basis. {appConfig.company?.name} expressly
               disclaims all warranties of any kind, whether express or implied.
             </p>
-            <ul className="list-disc pl-6 space-y-2">
+            <ul className="list-disc space-y-2 pl-6">
               <li>
                 The Service will function uninterrupted, secure, or available at
                 any particular time or location
@@ -212,7 +212,7 @@ export default function TermsOfService() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-2">11. Indemnification</h2>
+            <h2 className="mb-2 text-2xl font-semibold">11. Indemnification</h2>
             <p>
               You agree to defend, indemnify, and hold harmless{' '}
               {appConfig.company?.name} and its affiliates from and against any
@@ -222,7 +222,7 @@ export default function TermsOfService() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-2">
+            <h2 className="mb-2 text-2xl font-semibold">
               12. Term and Termination
             </h2>
             <p>
@@ -234,7 +234,7 @@ export default function TermsOfService() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-2">
+            <h2 className="mb-2 text-2xl font-semibold">
               13. General Provisions
             </h2>
             <p>
@@ -246,16 +246,16 @@ export default function TermsOfService() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-2">
+            <h2 className="mb-2 text-2xl font-semibold">
               14. General Provisions
             </h2>
-            <h3 className="text-xl font-semibold mb-2">14.1 Governing Law</h3>
+            <h3 className="mb-2 text-xl font-semibold">14.1 Governing Law</h3>
             <p>
               These Terms shall be governed by and construed in accordance with
               the laws of {appConfig.company?.jurisdiction}, without regard to
               its conflict of law provisions.
             </p>
-            <h3 className="text-xl font-semibold mb-2">
+            <h3 className="mb-2 text-xl font-semibold">
               14.2 Dispute Resolution
             </h3>
             <p>
@@ -263,7 +263,7 @@ export default function TermsOfService() {
               shall be resolved through [specify: arbitration/mediation/courts
               in your jurisdiction].
             </p>
-            <h3 className="text-xl font-semibold mb-2">
+            <h3 className="mb-2 text-xl font-semibold">
               14.3 Entire Agreement
             </h3>
             <p>
@@ -271,20 +271,20 @@ export default function TermsOfService() {
               notices published by us on the Service, constitute the entire
               agreement between you and us concerning the Service.
             </p>
-            <h3 className="text-xl font-semibold mb-2">14.4 Waiver</h3>
+            <h3 className="mb-2 text-xl font-semibold">14.4 Waiver</h3>
             <p>
               Our failure to enforce any right or provision of these Terms will
               not be considered a waiver of those rights. The waiver of any such
               right or provision will be effective only if in writing and signed
               by a duly authorized representative of ours.
             </p>
-            <h3 className="text-xl font-semibold mb-2">14.5 Severability</h3>
+            <h3 className="mb-2 text-xl font-semibold">14.5 Severability</h3>
             <p>
               If any provision of these Terms is held to be invalid or
               unenforceable, the remaining provisions of these Terms will remain
               in full force and effect.
             </p>
-            <h3 className="text-xl font-semibold mb-2">14.6 Assignment</h3>
+            <h3 className="mb-2 text-xl font-semibold">14.6 Assignment</h3>
             <p>
               You may not assign or transfer these Terms, by operation of law or
               otherwise, without our prior written consent. Any attempt by you
@@ -295,7 +295,7 @@ export default function TermsOfService() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-2">Contact Us</h2>
+            <h2 className="mb-2 text-2xl font-semibold">Contact Us</h2>
             <p>
               If you have any questions about these Terms of Service, please
               contact us at:

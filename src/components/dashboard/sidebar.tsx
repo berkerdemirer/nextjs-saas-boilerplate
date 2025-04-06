@@ -4,8 +4,8 @@ import { appConfig } from '@/app-config';
 import { IconInnerShadowTop } from '@tabler/icons-react';
 import Link from 'next/link';
 import * as React from 'react';
-import { Nav } from '@/components/dashboard-nav';
-import { NavUser } from '@/components/dashboard-nav-user';
+import { DashboardNav } from '@/components/dashboard/nav';
+import { DashboardNavUser } from '@/components/dashboard/nav-user';
 import {
   SidebarContent,
   SidebarFooter,
@@ -22,7 +22,7 @@ const userData = {
   avatar: '/avatars/shadcn.jpg',
 };
 
-export function Sidebar({
+export function DashboardSidebar({
   ...props
 }: React.ComponentProps<typeof SidebarPrimitive>) {
   return (
@@ -43,14 +43,14 @@ export function Sidebar({
         </SidebarMenu>
       </SidebarHeader>
       <SidebarContent>
-        <Nav items={appConfig.dashboard.mainNavItems} showTooltips />
-        <Nav
+        <DashboardNav items={appConfig.dashboard.mainNavItems} showTooltips />
+        <DashboardNav
           items={appConfig.dashboard.secondaryNavItems}
           className="mt-auto"
         />
       </SidebarContent>
       <SidebarFooter>
-        <NavUser user={userData} />
+        <DashboardNavUser user={userData} />
       </SidebarFooter>
     </SidebarPrimitive>
   );

@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { useCallback } from 'react';
 import { useForm } from 'react-hook-form';
 import { Form } from '@/components/form';
-import { InputField } from '@/components/input-field';
+import { InputField } from '@/components/form/fields/input-field';
 import { Button } from '@/components/ui/button';
 import {
   Card,
@@ -82,7 +82,7 @@ export function SignupForm() {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <p className="text-sm text-muted-foreground">
+          <p className="text-muted-foreground text-sm">
             You will be redirected to the login page in a few seconds...
           </p>
         </CardContent>
@@ -123,7 +123,7 @@ export function SignupForm() {
               )}
             </Button>
           </div>
-          <div className="after:border-border relative text-center text-sm after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-t my-4">
+          <div className="after:border-border relative my-4 text-center text-sm after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-t">
             <span className="bg-card text-muted-foreground relative z-10 px-2">
               Or continue with
             </span>

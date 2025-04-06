@@ -1,6 +1,6 @@
 import { appConfig } from '@/app-config';
-import { Header } from '@/components/dashboard-header';
-import { Sidebar } from '@/components/dashboard-sidebar';
+import { DashboardHeader } from '@/components/dashboard/header';
+import { DashboardSidebar } from '@/components/dashboard/sidebar';
 import { SidebarInset, SidebarProvider } from '@/components/ui/sidebar';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -13,9 +13,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         } as React.CSSProperties
       }
     >
-      <Sidebar variant="inset" />
+      <DashboardSidebar variant="inset" />
       <SidebarInset>
-        <Header
+        <DashboardHeader
           items={[
             ...appConfig.dashboard.mainNavItems,
             ...appConfig.dashboard.secondaryNavItems,

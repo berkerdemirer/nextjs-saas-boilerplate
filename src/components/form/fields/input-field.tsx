@@ -39,7 +39,7 @@ export function InputField({
         {...props}
       />
       {error?.message && (
-        <span className="text-xs text-destructive">{error.message}</span>
+        <span className="text-destructive text-xs">{error.message}</span>
       )}
     </div>
   );

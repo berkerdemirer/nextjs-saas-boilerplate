@@ -10,7 +10,7 @@ interface HeaderProps {
   items: Array<NavItem>;
 }
 
-export function Header({ items }: HeaderProps) {
+export function DashboardHeader({ items }: HeaderProps) {
   const pathname = usePathname();
   const currentTitle = items.find((item) => item.url === pathname)?.title;
 

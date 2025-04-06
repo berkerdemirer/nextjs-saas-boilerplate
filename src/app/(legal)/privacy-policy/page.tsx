@@ -18,7 +18,7 @@ export default function PrivacyPolicy() {
         </CardHeader>
         <CardContent className="space-y-6">
           <section>
-            <h2 className="text-2xl font-semibold mb-2">Introduction</h2>
+            <h2 className="mb-2 text-2xl font-semibold">Introduction</h2>
             <p>
               This Privacy Policy explains how {appConfig.company?.name} (
               &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) collects,
@@ -31,17 +31,17 @@ export default function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-4">
+            <h2 className="mb-4 text-2xl font-semibold">
               Information We Collect
             </h2>
-            <h3 className="text-xl font-semibold mb-2">
+            <h3 className="mb-2 text-xl font-semibold">
               Information You Provide to Us
             </h3>
             <p className="mb-2">
               We collect information that you voluntarily provide when using our
               Service, which may include:
             </p>
-            <ul className="list-disc pl-6 space-y-2">
+            <ul className="list-disc space-y-2 pl-6">
               <li>
                 Account information: When you register for an account, we
                 collect information such as your name, email address, username,
@@ -70,14 +70,14 @@ export default function PrivacyPolicy() {
           </section>
 
           <section>
-            <h3 className="text-xl font-semibold mb-2">
+            <h3 className="mb-2 text-xl font-semibold">
               Information We Collect Automatically
             </h3>
             <p className="mb-2">
               When you use our Service, we automatically collect certain
               information, including:
             </p>
-            <ul className="list-disc pl-6 space-y-2">
+            <ul className="list-disc space-y-2 pl-6">
               <li>
                 Usage data: Information about how you interact with our Service,
                 such as features you use, pages you visit, and actions you take.
@@ -100,13 +100,13 @@ export default function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-2">
+            <h2 className="mb-2 text-2xl font-semibold">
               How We Use Your Information
             </h2>
             <p className="mb-2">
               We use the information we collect for the following purposes:
             </p>
-            <ul className="list-disc pl-6 space-y-2">
+            <ul className="list-disc space-y-2 pl-6">
               <li>To provide, maintain, and improve our Service.</li>
               <li>To process transactions and manage your account.</li>
               <li>
@@ -134,33 +134,33 @@ export default function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-2">
+            <h2 className="mb-2 text-2xl font-semibold">
               How We Share Your Information
             </h2>
             <p className="mb-2">
               We may share your personal information in the following
               circumstances:
             </p>
-            <h3 className="text-xl font-semibold mb-2">Service Providers</h3>
+            <h3 className="mb-2 text-xl font-semibold">Service Providers</h3>
             <p className="mb-2">
               We share information with third-party vendors, consultants, and
               other service providers who perform services on our behalf, such
               as payment processing, data analysis, email delivery, hosting
               services, and customer service.
             </p>
-            <h3 className="text-xl font-semibold mb-2">Legal Requirements</h3>
+            <h3 className="mb-2 text-xl font-semibold">Legal Requirements</h3>
             <p className="mb-2">
               We may disclose your information if required to do so by law or in
               response to valid requests by public authorities (e.g., a court or
               government agency).
             </p>
-            <h3 className="text-xl font-semibold mb-2">Business Transfers</h3>
+            <h3 className="mb-2 text-xl font-semibold">Business Transfers</h3>
             <p className="mb-2">
               If we are involved in a merger, acquisition, or sale of all or a
               portion of our assets, your information may be transferred as part
               of that transaction.
             </p>
-            <h3 className="text-xl font-semibold mb-2">With Your Consent</h3>
+            <h3 className="mb-2 text-xl font-semibold">With Your Consent</h3>
             <p className="mb-2">
               We may share your information with third parties when we have your
               consent to do so.
@@ -168,7 +168,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-2">Data Retention</h2>
+            <h2 className="mb-2 text-2xl font-semibold">Data Retention</h2>
             <p className="mb-2">
               We retain your personal information for as long as necessary to
               fulfill the purposes outlined in this Privacy Policy, unless a
@@ -179,7 +179,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-2">Data Security</h2>
+            <h2 className="mb-2 text-2xl font-semibold">Data Security</h2>
             <p className="mb-2">
               We implement appropriate technical and organizational measures to
               protect your personal information against unauthorized access,
@@ -190,14 +190,14 @@ export default function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-2">
+            <h2 className="mb-2 text-2xl font-semibold">
               Your Rights and Choices
             </h2>
             <p className="mb-2">
               Depending on your location, you may have certain rights regarding
               your personal information, such as:
             </p>
-            <ul className="list-disc pl-6 space-y-2">
+            <ul className="list-disc space-y-2 pl-6">
               <li>
                 Access: The right to request access to your personal
                 information.
@@ -230,7 +230,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-2">
+            <h2 className="mb-2 text-2xl font-semibold">
               International Data Transfers
             </h2>
             <p className="mb-2">
@@ -244,7 +244,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-2">
+            <h2 className="mb-2 text-2xl font-semibold">
               Children&apos;s Privacy
             </h2>
             <p className="mb-2">
@@ -258,7 +258,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-2">
+            <h2 className="mb-2 text-2xl font-semibold">
               Changes to This Privacy Policy
             </h2>
             <p className="mb-2">
@@ -271,7 +271,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-2">Contact Us</h2>
+            <h2 className="mb-2 text-2xl font-semibold">Contact Us</h2>
             <p>
               If you have any questions about this Privacy Policy or our privacy
               practices, please contact us at:

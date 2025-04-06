@@ -19,7 +19,7 @@ import {
 } from '@/components/ui/sidebar';
 import { signOut } from '@/lib/auth-client';
 
-export function NavUser({
+export function DashboardNavUser({
   user,
 }: {
   user: {

@@ -15,9 +15,9 @@ export default function Home() {
     'Dark Mode',
   ];
   return (
-    <div className="min-h-screen flex flex-col">
-      <header className="w-full border-b py-4 px-6 flex justify-between items-center">
-        <div className="font-bold text-xl">Saas Boilerplate</div>
+    <div className="flex min-h-screen flex-col">
+      <header className="flex w-full items-center justify-between border-b px-6 py-4">
+        <div className="text-xl font-bold">Saas Boilerplate</div>
         <div className="flex gap-2">
           <ThemeToggle />
           <Button variant="outline" asChild>
@@ -28,19 +28,19 @@ export default function Home() {
           </Button>
         </div>
       </header>
-      <div className="flex-1 flex items-center justify-center overflow-hidden no-visible-scrollbar px-6 md:px-0">
-        <main className="flex flex-col gap-4 row-start-2 items-center justify-center">
+      <div className="no-visible-scrollbar flex flex-1 items-center justify-center overflow-hidden px-6 md:px-0">
+        <main className="row-start-2 flex flex-col items-center justify-center gap-4">
           <div className="flex flex-col gap-1">
-            <h3 className="font-bold text-4xl text-black dark:text-white text-center">
+            <h3 className="text-center text-4xl font-bold text-black dark:text-white">
               Saas Boilerplate
             </h3>
           </div>
-          <div className="md:w-10/12 w-full flex flex-col gap-4">
-            <div className="flex flex-col gap-3 pt-2 flex-wrap">
-              <div className="flex gap-2 justify-center flex-wrap">
+          <div className="flex w-full flex-col gap-4 md:w-10/12">
+            <div className="flex flex-col flex-wrap gap-3 pt-2">
+              <div className="flex flex-wrap justify-center gap-2">
                 {features.map((feature) => (
                   <span
-                    className="border-b pb-1 text-muted-foreground text-xs cursor-pointer hover:text-foreground duration-150 ease-in-out transition-all hover:border-foreground flex items-center gap-1"
+                    className="text-muted-foreground hover:text-foreground hover:border-foreground flex cursor-pointer items-center gap-1 border-b pb-1 text-xs transition-all duration-150 ease-in-out"
                     key={feature}
                   >
                     {feature}.

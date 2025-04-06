@@ -7,7 +7,7 @@ import { z } from 'zod';
 import { useCallback, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Form } from '@/components/form';
-import { InputField } from '@/components/input-field';
+import { InputField } from '@/components/form/fields/input-field';
 import { Button } from '@/components/ui/button';
 import {
   Card,
@@ -80,7 +80,7 @@ export function ForgetPasswordForm() {
               Didn&apos;t receive an email?{' '}
               <Button
                 variant="link"
-                className="p-0 h-auto font-normal"
+                className="h-auto p-0 font-normal"
                 onClick={() => setIsEmailSent(false)}
               >
                 Try again

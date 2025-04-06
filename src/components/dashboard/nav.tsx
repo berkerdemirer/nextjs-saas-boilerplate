@@ -18,7 +18,11 @@ interface NavProps extends React.ComponentPropsWithoutRef<typeof SidebarGroup> {
   showTooltips?: boolean;
 }
 
-export function Nav({ items, showTooltips = false, ...props }: NavProps) {
+export function DashboardNav({
+  items,
+  showTooltips = false,
+  ...props
+}: NavProps) {
   const pathname = usePathname();
 
   return (
