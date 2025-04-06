@@ -43,7 +43,6 @@ Follow these steps to get your development environment up and running:
     - `STRIPE_KEY`: Stripe key
     - `STRIPE_WEBHOOK_SECRET`: Webhook secret
     - `RESEND_API_KEY`: Your API key from [Resend](https://resend.com/) for sending emails.
-    - `SENTRY_AUTH_TOKEN`: Your auth token if using [Sentry](https://sentry.io/) for error tracking.
     - `GOOGLE_CLIENT_ID`: Your Google OAuth client ID for social login.
     - `GOOGLE_CLIENT_SECRET`: Your Google OAuth client secret for social login.
 
