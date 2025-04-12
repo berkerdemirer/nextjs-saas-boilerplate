@@ -22,7 +22,7 @@ export function InputField({
   const error = errors[name] as FieldError | undefined;
 
   return (
-    <div>
+    <>
       {label && (
         <Label className="mb-2" htmlFor={name}>
           {label}
@@ -41,6 +41,6 @@ export function InputField({
       {error?.message && (
         <span className="text-destructive text-xs">{error.message}</span>
       )}
-    </div>
+    </>
   );
 }

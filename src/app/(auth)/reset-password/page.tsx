@@ -1,5 +1,5 @@
-import { appConfig } from '@/src/app-config';
 import { ResetPasswordForm } from '@/src/components/form/reset-password-form';
+import { appConfig } from '@/src/utils/app-config';
 import Link from 'next/link';
 
 export default function Page({

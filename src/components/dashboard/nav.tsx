@@ -8,7 +8,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from '@/src/components/ui/sidebar';
-import { NavItem } from '@/src/types';
+import { NavItem } from '@/src/utils/types';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 

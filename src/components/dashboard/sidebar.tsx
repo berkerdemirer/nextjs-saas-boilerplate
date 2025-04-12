@@ -1,6 +1,5 @@
 'use client';
 
-import { appConfig } from '@/src/app-config';
 import { DashboardNav } from '@/src/components/dashboard/nav';
 import { DashboardNavUser } from '@/src/components/dashboard/nav-user';
 import {
@@ -12,6 +11,7 @@ import {
   SidebarMenuItem,
   Sidebar as SidebarPrimitive,
 } from '@/src/components/ui/sidebar';
+import { appConfig } from '@/src/utils/app-config';
 import { IconInnerShadowTop } from '@tabler/icons-react';
 import Link from 'next/link';
 import * as React from 'react';

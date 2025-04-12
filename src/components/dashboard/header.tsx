@@ -3,7 +3,7 @@
 import { ThemeToggle } from '@/src/components/theme-toggle';
 import { Separator } from '@/src/components/ui/separator';
 import { SidebarTrigger } from '@/src/components/ui/sidebar';
-import { NavItem } from '@/src/types';
+import { NavItem } from '@/src/utils/types';
 import { usePathname } from 'next/navigation';
 
 interface HeaderProps {

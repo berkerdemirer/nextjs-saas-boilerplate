@@ -1,10 +1,10 @@
-import { appConfig } from '@/src/app-config';
 import {
   Card,
   CardContent,
   CardHeader,
   CardTitle,
 } from '@/src/components/ui/card';
+import { appConfig } from '@/src/utils/app-config';
 
 export default function TermsOfService() {
   return (

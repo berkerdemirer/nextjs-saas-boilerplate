@@ -1,5 +1,5 @@
-import { appConfig } from '@/src/app-config';
 import { LoginForm } from '@/src/components/form/signin-form';
+import { appConfig } from '@/src/utils/app-config';
 import Link from 'next/link';
 
 export default function Page() {

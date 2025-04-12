@@ -1,6 +1,6 @@
-import { appConfig } from '@/src/app-config';
 import { ThemeProvider } from '@/src/components/theme-provider';
 import { Toaster } from '@/src/components/ui/sonner';
+import { appConfig } from '@/src/utils/app-config';
 import { createMetadata } from '@/src/utils/createMetadata';
 import localFont from 'next/font/local';
 import './globals.css';

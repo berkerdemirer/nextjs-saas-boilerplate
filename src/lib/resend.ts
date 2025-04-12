@@ -1,4 +1,4 @@
-import { appConfig } from '@/src/app-config';
+import { appConfig } from '@/src/utils/app-config';
 import { ENV } from '@/src/utils/env';
 import { Resend } from 'resend';
 import { ReactNode } from 'react';
