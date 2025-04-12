@@ -1,6 +1,6 @@
 'use client';
 
-import { cn } from '@/utils/cn';
+import { cn } from '@/src/utils/cn';
 import { z } from 'zod';
 import { FormProvider, UseFormReturn } from 'react-hook-form';
 

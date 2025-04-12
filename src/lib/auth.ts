@@ -1,15 +1,25 @@
-import { appConfig } from '@/app-config';
-import { db } from '@/db';
-import { account, session, user, verification } from '@/db/schema';
-import { resetPasswordEmail } from '@/email-templates/reset-password';
-import { verifyEmail } from '@/email-templates/verify-email';
-import { welcomeEmail } from '@/email-templates/welcome';
-import { stripe } from '@better-auth/stripe';
+import { db } from '@/drizzle';
+import {
+  account,
+  product,
+  session,
+  user,
+  verification,
+} from '@/drizzle/schema';
+import { resetPasswordEmail } from '@/src/email-templates/reset-password';
+import { verifyEmail } from '@/src/email-templates/verify-email';
+import { welcomeEmail } from '@/src/email-templates/welcome';
+import { sendEmail } from '@/src/lib/resend';
+import { ENV } from '@/src/utils/env';
+import { polar } from '@polar-sh/better-auth';
+import { Polar } from '@polar-sh/sdk';
 import { betterAuth } from 'better-auth';
 import { drizzleAdapter } from 'better-auth/adapters/drizzle';
-import { nextCookies } from 'better-auth/next-js';
-import Stripe from 'stripe';
-import { sendEmail } from '@/lib/resend';
+
+const client = new Polar({
+  accessToken: ENV.POLAR_ACCESS_TOKEN,
+  server: 'production',
+});
 
 export const auth = betterAuth({
   database: drizzleAdapter(db, {
@@ -59,8 +69,8 @@ export const auth = betterAuth({
   },
   socialProviders: {
     google: {
-      clientId: process.env.GOOGLE_CLIENT_ID as string,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
+      clientId: ENV.GOOGLE_CLIENT_ID,
+      clientSecret: ENV.GOOGLE_CLIENT_SECRET,
     },
   },
   databaseHooks: {
@@ -79,28 +89,20 @@ export const auth = betterAuth({
     },
   },
   plugins: [
-    nextCookies(),
-    stripe({
-      stripeClient: new Stripe(process.env.STRIPE_KEY!),
-      stripeWebhookSecret: process.env.STRIPE_WEBHOOK_SECRET!,
-      createCustomerOnSignUp: true,
-      subscription: {
+    polar({
+      checkout: {
         enabled: true,
-        plans: [
-          {
-            name: 'Starter',
-            priceId: appConfig.stripe?.subscription?.starter.priceIds.default,
-            annualDiscountPriceId:
-              appConfig.stripe?.subscription?.starter.priceIds.annual,
-          },
-          {
-            name: 'Professional',
-            priceId: appConfig.stripe?.subscription?.pro.priceIds.default,
-            annualDiscountPriceId:
-              appConfig.stripe?.subscription?.pro.priceIds.annual,
-          },
-        ],
+        products: async () => {
+          const allProducts = await db.select().from(product);
+          return allProducts.map(({ productId, slug }) => ({
+            productId,
+            slug,
+          }));
+        },
+        successUrl: '/success?checkout_id={CHECKOUT_ID}',
       },
+      client,
+      createCustomerOnSignUp: true,
     }),
   ],
 });

@@ -1,8 +1,10 @@
 'use client';
 
-import { IconDotsVertical, IconLogout } from '@tabler/icons-react';
-import { useRouter } from 'next/navigation';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from '@/src/components/ui/avatar';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -10,14 +12,16 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
+} from '@/src/components/ui/dropdown-menu';
 import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
   useSidebar,
-} from '@/components/ui/sidebar';
-import { signOut } from '@/lib/auth-client';
+} from '@/src/components/ui/sidebar';
+import { signOut } from '@/src/lib/auth-client';
+import { IconDotsVertical, IconLogout } from '@tabler/icons-react';
+import { useRouter } from 'next/navigation';
 
 export function DashboardNavUser({
   user,

@@ -40,8 +40,8 @@ Follow these steps to get your development environment up and running:
 
     - `DATABASE_URL`: Your PostgreSQL connection string.
     - `BETTER_AUTH_SECRET`: A secret key for authentication.
-    - `STRIPE_KEY`: Stripe key
-    - `STRIPE_WEBHOOK_SECRET`: Webhook secret
+    - `POLAR_ACCESS_TOKEN`: Polar acess token key
+    - `POLAR_WEBHOOK_SECRET`: Webhook secret
     - `RESEND_API_KEY`: Your API key from [Resend](https://resend.com/) for sending emails.
     - `GOOGLE_CLIENT_ID`: Your Google OAuth client ID for social login.
     - `GOOGLE_CLIENT_SECRET`: Your Google OAuth client secret for social login.
@@ -84,9 +84,9 @@ Key features implemented:
   - Users are auto-signed in and redirected post-verification.
 - **Password Reset:** Users can reset their passwords via email using the `src/components/email-templates/reset-password.tsx` template.
 - **Welcome Email:** A welcome email (`src/components/email-templates/welcome.tsx`) is sent when a new user record is created in the database.
-- **Stripe Integration:**
-  - Automatically creates Stripe customers on user sign-up.
-  - Manages subscription plans ('Starter', 'Professional') defined in `src/app-config.ts`. Requires `STRIPE_KEY` and `STRIPE_WEBHOOK_SECRET` environment variables.
+- **Polar Integration:**
+  - Automatically creates Polar customers on user sign-up
+  - You should define the products in the db to dynamically fetch them for the better-auth/polar integration
 - **Next.js Integration:** Uses the `nextCookies()` plugin for proper cookie handling within the Next.js framework.
 
 You can customize email templates, authentication flows, and plugin configurations by modifying `src/lib/auth.ts` and the referenced email template components.
@@ -100,6 +100,7 @@ To learn more about the technologies used in this boilerplate, refer to their re
 - [Better Auth Documentation](https://better-auth.dev/docs)
 - [Shadcn/ui Documentation](https://ui.shadcn.com/docs)
 - [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+- [Polar Documentation](https://docs.polar.sh/introduction)
 
 ## Analytics
 

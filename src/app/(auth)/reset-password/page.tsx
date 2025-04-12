@@ -1,6 +1,6 @@
-import { appConfig } from '@/app-config';
+import { appConfig } from '@/src/app-config';
+import { ResetPasswordForm } from '@/src/components/form/reset-password-form';
 import Link from 'next/link';
-import { ResetPasswordForm } from '@/components/form/reset-password-form';
 
 export default function Page({
   searchParams,

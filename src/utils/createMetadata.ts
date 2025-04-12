@@ -1,4 +1,4 @@
-import { appConfig } from '@/app-config';
+import { appConfig } from '@/src/app-config';
 import { Metadata } from 'next/types';
 
 export function createMetadata(override: Metadata): Metadata {

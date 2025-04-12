@@ -1,7 +1,7 @@
-import { cn } from '@/utils/cn';
+import { Input } from '@/src/components/ui/input';
+import { Label } from '@/src/components/ui/label';
+import { cn } from '@/src/utils/cn';
 import { FieldError, useFormContext } from 'react-hook-form';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
 
 interface InputFieldProps extends React.InputHTMLAttributes<HTMLInputElement> {
   name: string;

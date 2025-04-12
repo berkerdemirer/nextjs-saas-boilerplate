@@ -1,4 +1,4 @@
-import { cn } from '@/utils/cn';
+import { cn } from '@/src/utils/cn';
 import * as React from 'react';
 
 function Input({ className, type, ...props }: React.ComponentProps<'input'>) {

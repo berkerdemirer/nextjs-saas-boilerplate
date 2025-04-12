@@ -1,11 +1,8 @@
 'use client';
 
-import { appConfig } from '@/app-config';
-import { IconInnerShadowTop } from '@tabler/icons-react';
-import Link from 'next/link';
-import * as React from 'react';
-import { DashboardNav } from '@/components/dashboard/nav';
-import { DashboardNavUser } from '@/components/dashboard/nav-user';
+import { appConfig } from '@/src/app-config';
+import { DashboardNav } from '@/src/components/dashboard/nav';
+import { DashboardNavUser } from '@/src/components/dashboard/nav-user';
 import {
   SidebarContent,
   SidebarFooter,
@@ -14,7 +11,10 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   Sidebar as SidebarPrimitive,
-} from '@/components/ui/sidebar';
+} from '@/src/components/ui/sidebar';
+import { IconInnerShadowTop } from '@tabler/icons-react';
+import Link from 'next/link';
+import * as React from 'react';
 
 const userData = {
   name: 'shadcn',

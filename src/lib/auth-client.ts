@@ -1,5 +1,4 @@
-import { appConfig } from '@/app-config';
-import { stripeClient } from '@better-auth/stripe/client';
+import { appConfig } from '@/src/app-config';
 import { createAuthClient } from 'better-auth/react';
 
 export const {
@@ -13,9 +12,4 @@ export const {
   resetPassword,
 } = createAuthClient({
   baseURL: appConfig.appUrl,
-  plugins: [
-    stripeClient({
-      subscription: true,
-    }),
-  ],
 });

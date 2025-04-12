@@ -1,10 +1,10 @@
 'use client';
 
-import { NavItem } from '@/types';
+import { ThemeToggle } from '@/src/components/theme-toggle';
+import { Separator } from '@/src/components/ui/separator';
+import { SidebarTrigger } from '@/src/components/ui/sidebar';
+import { NavItem } from '@/src/types';
 import { usePathname } from 'next/navigation';
-import { ThemeToggle } from '@/components/theme-toggle';
-import { Separator } from '@/components/ui/separator';
-import { SidebarTrigger } from '@/components/ui/sidebar';
 
 interface HeaderProps {
   items: Array<NavItem>;

@@ -1,6 +1,6 @@
-import { appConfig } from '@/app-config';
+import { appConfig } from '@/src/app-config';
+import { ForgetPasswordForm } from '@/src/components/form/forget-password-form';
 import Link from 'next/link';
-import { ForgetPasswordForm } from '@/components/form/forget-password-form';
 
 export default function Page() {
   return (

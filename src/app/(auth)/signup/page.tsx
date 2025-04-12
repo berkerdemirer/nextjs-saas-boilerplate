@@ -1,6 +1,6 @@
-import { appConfig } from '@/app-config';
+import { appConfig } from '@/src/app-config';
+import { SignupForm } from '@/src/components/form/signup-form';
 import Link from 'next/link';
-import { SignupForm } from '@/components/form/signup-form';
 
 export default function Page() {
   return (

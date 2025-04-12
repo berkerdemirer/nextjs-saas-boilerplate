@@ -1,5 +1,16 @@
 'use client';
 
+import { InputField } from '@/src/components/form/fields/input-field';
+import { Form } from '@/src/components/form/form';
+import { Button } from '@/src/components/ui/button';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/src/components/ui/card';
+import { resetPassword } from '@/src/lib/auth-client';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Loader2 } from 'lucide-react';
 import { toast } from 'sonner';
@@ -7,17 +18,6 @@ import { z } from 'zod';
 import { useRouter } from 'next/navigation';
 import { useCallback, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { Form } from '@/components/form';
-import { InputField } from '@/components/form/fields/input-field';
-import { Button } from '@/components/ui/button';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
-import { resetPassword } from '@/lib/auth-client';
 
 const schema = z
   .object({

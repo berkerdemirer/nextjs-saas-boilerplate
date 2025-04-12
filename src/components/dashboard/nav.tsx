@@ -1,17 +1,16 @@
 'use client';
 
-import { NavItem } from '@/types';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import * as React from 'react';
-import { DynamicIcon } from '@/components/ui/icons';
+import { DynamicIcon } from '@/src/components/ui/icons';
 import {
   SidebarGroup,
   SidebarGroupContent,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from '@/components/ui/sidebar';
+} from '@/src/components/ui/sidebar';
+import { NavItem } from '@/src/types';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 interface NavProps extends React.ComponentPropsWithoutRef<typeof SidebarGroup> {
   items: Array<NavItem>;

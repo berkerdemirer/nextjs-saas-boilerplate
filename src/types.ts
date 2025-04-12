@@ -1,4 +1,4 @@
-import { IconType } from '@/components/ui/icons';
+import { IconType } from '@/src/components/ui/icons';
 
 export interface NavItem {
   title: string;
@@ -23,33 +23,6 @@ export interface CompanyInfo {
   jurisdiction?: string;
 }
 
-export interface SubscriptionMeta {
-  name: string;
-  price: string;
-  yearlyPrice: string;
-  period: string;
-  features: string[];
-  description: string;
-  buttonText: string;
-  href: string;
-  isPopular: boolean;
-}
-
-export interface PriceIds {
-  default: string;
-  annual: string;
-}
-
-export interface SubscriptionPlan {
-  meta: SubscriptionMeta;
-  priceIds: PriceIds;
-}
-
-export interface SubscriptionPlans {
-  pro: SubscriptionPlan;
-  starter: SubscriptionPlan;
-}
-
 export interface Config {
   appName: string;
   appUrl: string;
@@ -62,8 +35,5 @@ export interface Config {
   dashboard: {
     mainNavItems: NavItem[];
     secondaryNavItems: NavItem[];
-  };
-  stripe?: {
-    subscription?: SubscriptionPlans;
   };
 }

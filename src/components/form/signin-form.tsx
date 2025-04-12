@@ -1,23 +1,23 @@
 'use client';
 
-import { zodResolver } from '@hookform/resolvers/zod';
-import { Loader2 } from 'lucide-react';
-import { z } from 'zod';
-import Link from 'next/link';
-import { useCallback } from 'react';
-import { useForm } from 'react-hook-form';
-import { Form } from '@/components/form';
-import { InputField } from '@/components/form/fields/input-field';
-import { Button } from '@/components/ui/button';
+import { InputField } from '@/src/components/form/fields/input-field';
+import { Form } from '@/src/components/form/form';
+import { Button } from '@/src/components/ui/button';
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card';
-import { signIn } from '@/lib/auth-client';
-import { useAuthFetchOptions } from '@/hooks/use-auth-fetch-options';
+} from '@/src/components/ui/card';
+import { useAuthFetchOptions } from '@/src/hooks/use-auth-fetch-options';
+import { signIn } from '@/src/lib/auth-client';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { Loader2 } from 'lucide-react';
+import { z } from 'zod';
+import Link from 'next/link';
+import { useCallback } from 'react';
+import { useForm } from 'react-hook-form';
 
 const signInSchema = z.object({
   email: z.string().email('Please enter a valid email address'),

@@ -1,4 +1,5 @@
-import { appConfig } from '@/app-config';
+import { appConfig } from '@/src/app-config';
+import { ENV } from '@/src/utils/env';
 import { Resend } from 'resend';
 import { ReactNode } from 'react';
 
@@ -11,11 +12,7 @@ export async function sendEmail({
   subject: string;
   template: ReactNode;
 }) {
-  if (!process.env.RESEND_API_KEY) {
-    throw new Error('RESEND_API_KEY environment variable is not set');
-  }
-
-  const resend = new Resend(process.env.RESEND_API_KEY);
+  const resend = new Resend(ENV.RESEND_API_KEY);
 
   try {
     const { data, error } = await resend.emails.send({

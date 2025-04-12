@@ -1,8 +1,8 @@
-import { appConfig } from '@/app-config';
-import { createMetadata } from '@/utils/createMetadata';
+import { appConfig } from '@/src/app-config';
+import { ThemeProvider } from '@/src/components/theme-provider';
+import { Toaster } from '@/src/components/ui/sonner';
+import { createMetadata } from '@/src/utils/createMetadata';
 import localFont from 'next/font/local';
-import { ThemeProvider } from '@/components/theme-provider';
-import { Toaster } from '@/components/ui/sonner';
 import './globals.css';
 
 const GeistSans = localFont({
