@@ -6,9 +6,9 @@ import {
   user,
   verification,
 } from '@/drizzle/schema';
-import { resetPasswordEmail } from '@/src/email-templates/reset-password';
-import { verifyEmail } from '@/src/email-templates/verify-email';
-import { welcomeEmail } from '@/src/email-templates/welcome';
+import { resetPasswordEmail } from '@/src/components/email-templates/reset-password';
+import { verifyEmail } from '@/src/components/email-templates/verify-email';
+import { welcomeEmail } from '@/src/components/email-templates/welcome';
 import { sendEmail } from '@/src/lib/resend';
 import { ENV } from '@/src/utils/env';
 import { polar } from '@polar-sh/better-auth';
