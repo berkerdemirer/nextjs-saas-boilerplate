@@ -58,7 +58,7 @@
     "@types/react-dom": "^19",
     "drizzle-kit": "^0.30.5",
     "eslint": "^9",
-    "eslint-config-next": "15.2.4",
+    "eslint-config-next": "15.3.0",
     "eslint-config-prettier": "^10.0.2",
     "prettier": "3.4.2",
     "prettier-plugin-tailwindcss": "^0.6.11",
@@ -68,13 +68,13 @@
   },
   "overrides": {
     "@esbuild-kit/core-utils": {
-      "esbuild": "0.25.0"
+      "esbuild": "0.25.2"
     },
     "@esbuild-kit/esm-loader": {
-      "esbuild": "0.25.0"
+      "esbuild": "0.25.2"
     },
     "drizzle-kit": {
-      "esbuild": "0.25.0"
+      "esbuild": "0.25.2"
     }
   }
 }
