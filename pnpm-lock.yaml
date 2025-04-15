@@ -88,7 +88,7 @@ importers:
         version: 7.55.0(react@19.1.0)
       resend:
         specifier: ^4.1.2
-        version: 4.2.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+        version: 4.3.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       sonner:
         specifier: ^2.0.2
         version: 2.0.3(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -1408,13 +1408,6 @@ packages:
     engines: {node: '>=18.0.0'}
     peerDependencies:
       react: ^18.0 || ^19.0 || ^19.0.0-rc
-
-  '@react-email/render@1.0.5':
-    resolution: {integrity: sha512-CA69HYXPk21HhtAXATIr+9JJwpDNmAFCvdMUjWmeoD1+KhJ9NAxusMRxKNeibdZdslmq3edaeOKGbdQ9qjK8LQ==}
-    engines: {node: '>=18.0.0'}
-    peerDependencies:
-      react: ^18.0 || ^19.0 || ^19.0.0-rc
-      react-dom: ^18.0 || ^19.0 || ^19.0.0-rc
 
   '@react-email/render@1.0.6':
     resolution: {integrity: sha512-zNueW5Wn/4jNC1c5LFgXzbUdv5Lhms+FWjOvWAhal7gx5YVf0q6dPJ0dnR70+ifo59gcMLwCZEaTS9EEuUhKvQ==}
@@ -3024,8 +3017,8 @@ packages:
     resolution: {integrity: sha512-dYqgNSZbDwkaJ2ceRd9ojCGjBq+mOm9LmtXnAnEGyHhN/5R7iDW2TRw3h+o/jCFxus3P2LfWIIiwowAjANm7IA==}
     engines: {node: '>= 0.4'}
 
-  resend@4.2.0:
-    resolution: {integrity: sha512-s6ogU+BBYH1H6Zl926cpddtLRAJWeFv5cIKcuHLWk1QYhFTbpFJlhqx31pnN2f0CB075KFSrc1Xf6HG690wzuw==}
+  resend@4.3.0:
+    resolution: {integrity: sha512-4OBHeusMVSl0vcba2J3AaGzdZ1SXAAhX/Wkcwobe16AHmlW9h3li8wG62Fhvlsc61e+wlQoxcwJZP6WrBTbghQ==}
     engines: {node: '>=18'}
 
   resolve-from@4.0.0:
@@ -4340,14 +4333,6 @@ snapshots:
   '@react-email/preview@0.0.12(react@19.1.0)':
     dependencies:
       react: 19.1.0
-
-  '@react-email/render@1.0.5(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
-    dependencies:
-      html-to-text: 9.0.5
-      prettier: 3.4.2
-      react: 19.1.0
-      react-dom: 19.1.0(react@19.1.0)
-      react-promise-suspense: 0.3.4
 
   '@react-email/render@1.0.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
     dependencies:
@@ -6040,9 +6025,9 @@ snapshots:
       gopd: 1.2.0
       set-function-name: 2.0.2
 
-  resend@4.2.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
+  resend@4.3.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
     dependencies:
-      '@react-email/render': 1.0.5(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      '@react-email/render': 1.0.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
     transitivePeerDependencies:
       - react
       - react-dom
