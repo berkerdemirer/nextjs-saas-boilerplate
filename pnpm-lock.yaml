@@ -12,8 +12,8 @@ importers:
         specifier: ^5.0.0
         version: 5.0.1(react-hook-form@7.55.0(react@19.1.0))
       '@polar-sh/better-auth':
-        specifier: ^0.0.10
-        version: 0.0.10(@polar-sh/sdk@0.32.9(zod@3.24.2))(better-auth@1.2.7)
+        specifier: ^0.0.11
+        version: 0.0.11(@polar-sh/sdk@0.32.9(zod@3.24.2))(better-auth@1.2.7)
       '@polar-sh/sdk':
         specifier: ^0.32.7
         version: 0.32.9(zod@3.24.2)
@@ -812,8 +812,8 @@ packages:
   '@petamoriken/float16@3.9.2':
     resolution: {integrity: sha512-VgffxawQde93xKxT3qap3OH+meZf7VaSB5Sqd4Rqc+FP5alWbpOyan/7tRbOAvynjpG3GpdtAuGU/NdhQpmrog==}
 
-  '@polar-sh/better-auth@0.0.10':
-    resolution: {integrity: sha512-g17mMiZBSJ9QAuXSPJyBHP5RrbtVFiIfRfnsMzX59FpZPrB9sHTpSx8+XN5kNtwIlYVHWVIWSuEdqAdrIcsi0A==}
+  '@polar-sh/better-auth@0.0.11':
+    resolution: {integrity: sha512-Oaok5AfpZRAVQ86uPb/OxxQPp/khHf2ZprCMnVyNNwdOIKlHrx8UxAcmiktpbi0NFl+IgoCFjXR2uoCuwTAPwQ==}
     engines: {node: '>=16'}
     peerDependencies:
       '@polar-sh/sdk': ^0.32.0
@@ -3712,7 +3712,7 @@ snapshots:
   '@petamoriken/float16@3.9.2':
     optional: true
 
-  '@polar-sh/better-auth@0.0.10(@polar-sh/sdk@0.32.9(zod@3.24.2))(better-auth@1.2.7)':
+  '@polar-sh/better-auth@0.0.11(@polar-sh/sdk@0.32.9(zod@3.24.2))(better-auth@1.2.7)':
     dependencies:
       '@polar-sh/sdk': 0.32.9(zod@3.24.2)
       better-auth: 1.2.7
