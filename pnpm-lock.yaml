@@ -13,10 +13,10 @@ importers:
         version: 5.0.1(react-hook-form@7.55.0(react@19.1.0))
       '@polar-sh/better-auth':
         specifier: ^0.0.11
-        version: 0.0.11(@polar-sh/sdk@0.32.9(zod@3.24.3))(better-auth@1.2.7)
+        version: 0.0.11(@polar-sh/sdk@0.32.10(zod@3.24.3))(better-auth@1.2.7)
       '@polar-sh/sdk':
         specifier: ^0.32.7
-        version: 0.32.9(zod@3.24.3)
+        version: 0.32.10(zod@3.24.3)
       '@radix-ui/react-avatar':
         specifier: ^1.1.3
         version: 1.1.4(@types/react-dom@19.1.2(@types/react@19.1.2))(@types/react@19.1.2)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -822,8 +822,8 @@ packages:
       '@polar-sh/sdk': ^0.32.0
       better-auth: ^1.2.0
 
-  '@polar-sh/sdk@0.32.9':
-    resolution: {integrity: sha512-dqYVHbXJPq32hBtgInMGLUjgmZAzasFOWcmmY8S3MYKe1e1Pazm0IVa5dak/ngIbaQLVv1OAODHw+BtroBVdXw==}
+  '@polar-sh/sdk@0.32.10':
+    resolution: {integrity: sha512-k7og3L1RP7kTRFVSxiVF4GIkTy/JQwfUY4D1aqSEnj3OtR13NjHsAW2Rb6bEJDuws2/bzfAVQvbQTxf+VsmK9A==}
     hasBin: true
     peerDependencies:
       '@modelcontextprotocol/sdk': ^1.5.0
@@ -3715,13 +3715,13 @@ snapshots:
   '@petamoriken/float16@3.9.2':
     optional: true
 
-  '@polar-sh/better-auth@0.0.11(@polar-sh/sdk@0.32.9(zod@3.24.3))(better-auth@1.2.7)':
+  '@polar-sh/better-auth@0.0.11(@polar-sh/sdk@0.32.10(zod@3.24.3))(better-auth@1.2.7)':
     dependencies:
-      '@polar-sh/sdk': 0.32.9(zod@3.24.3)
+      '@polar-sh/sdk': 0.32.10(zod@3.24.3)
       better-auth: 1.2.7
       zod: 3.24.3
 
-  '@polar-sh/sdk@0.32.9(zod@3.24.3)':
+  '@polar-sh/sdk@0.32.10(zod@3.24.3)':
     dependencies:
       standardwebhooks: 1.0.0
       zod: 3.24.3
