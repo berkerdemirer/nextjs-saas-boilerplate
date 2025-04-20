@@ -5,7 +5,7 @@ export const appConfig: Config = {
   appUrl: 'http://localhost:3000',
   appDescription: 'This is my app description',
   email: {
-    from: 'demirerberker@thesaasgrid.com',
+    from: 'demirerberker@berkerdemirer.com',
   },
   company: {
     name: 'My Company',

@@ -9,8 +9,8 @@ import {
 import { resetPasswordEmail } from '@/src/components/email-templates/reset-password';
 import { verifyEmail } from '@/src/components/email-templates/verify-email';
 import { welcomeEmail } from '@/src/components/email-templates/welcome';
-import { sendEmail } from '@/src/utils/resend';
 import { ENV } from '@/src/utils/env';
+import { sendEmail } from '@/src/utils/resend';
 import { polar } from '@polar-sh/better-auth';
 import { Polar } from '@polar-sh/sdk';
 import { betterAuth } from 'better-auth';
@@ -18,7 +18,7 @@ import { drizzleAdapter } from 'better-auth/adapters/drizzle';
 
 const client = new Polar({
   accessToken: ENV.POLAR_ACCESS_TOKEN,
-  server: 'production',
+  server: 'sandbox', // change this to 'production' when ready
 });
 
 export const auth = betterAuth({
