@@ -1,5 +1,6 @@
 import { ThemeToggle } from '@/src/components/theme-toggle';
 import { Button } from '@/src/components/ui/button';
+import { SIGN_IN_URL, SIGN_UP_URL } from '@/src/utils/consts';
 import Link from 'next/link';
 
 export default function Home() {
@@ -21,10 +22,10 @@ export default function Home() {
         <div className="flex gap-2">
           <ThemeToggle />
           <Button variant="outline" asChild>
-            <Link href="/signin">Sign In</Link>
+            <Link href={SIGN_IN_URL}>Sign In</Link>
           </Button>
           <Button asChild>
-            <Link href="/signup">Sign Up</Link>
+            <Link href={SIGN_UP_URL}>Sign Up</Link>
           </Button>
         </div>
       </header>

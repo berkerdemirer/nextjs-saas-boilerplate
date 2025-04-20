@@ -1,7 +1,7 @@
 'use client';
 
-import { InputField } from '@/src/components/form/fields/input-field';
-import { Form } from '@/src/components/form/form';
+import { InputField } from '@/src/components/form-fields/input-field';
+import { Form } from '@/src/components/forms/form';
 import { Button } from '@/src/components/ui/button';
 import {
   Card,
@@ -11,7 +11,9 @@ import {
   CardTitle,
 } from '@/src/components/ui/card';
 import { useAuthFetchOptions } from '@/src/hooks/use-auth-fetch-options';
-import { signIn, signUp } from '@/src/lib/auth-client';
+import { appConfig } from '@/src/utils/app-config';
+import { sendVerificationEmail, signIn, signUp } from '@/src/utils/auth-client';
+import { SIGN_IN_URL } from '@/src/utils/consts';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Loader2 } from 'lucide-react';
 import { z } from 'zod';
@@ -49,7 +51,7 @@ export function SignupForm() {
 
   const { fetchOptions, loading, socialFetchOptions, socialLoading, success } =
     useAuthFetchOptions({
-      redirectTo: '/signin',
+      redirectTo: SIGN_IN_URL,
       showSuccess: true,
     });
 
@@ -57,6 +59,11 @@ export function SignupForm() {
     async (data: SignupFormValues) => {
       await signUp.email({
         ...data,
+        fetchOptions,
+      });
+      await sendVerificationEmail({
+        email: data.email,
+        callbackURL: `${appConfig.appUrl}/dashboard`,
         fetchOptions,
       });
     },
@@ -164,7 +171,7 @@ export function SignupForm() {
             </Button>
             <div className="text-center text-sm">
               Already have an account?{' '}
-              <Link href="/signin" className="underline underline-offset-4">
+              <Link href={SIGN_IN_URL} className="underline underline-offset-4">
                 Login
               </Link>
             </div>

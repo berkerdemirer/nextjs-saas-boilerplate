@@ -19,7 +19,7 @@ import {
   SidebarMenuItem,
   useSidebar,
 } from '@/src/components/ui/sidebar';
-import { signOut } from '@/src/lib/auth-client';
+import { signOut } from '@/src/utils/auth-client';
 import { IconDotsVertical, IconLogout } from '@tabler/icons-react';
 import { useRouter } from 'next/navigation';
 

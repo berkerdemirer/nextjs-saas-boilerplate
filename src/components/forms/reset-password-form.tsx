@@ -1,7 +1,7 @@
 'use client';
 
-import { InputField } from '@/src/components/form/fields/input-field';
-import { Form } from '@/src/components/form/form';
+import { InputField } from '@/src/components/form-fields/input-field';
+import { Form } from '@/src/components/forms/form';
 import { Button } from '@/src/components/ui/button';
 import {
   Card,
@@ -10,7 +10,8 @@ import {
   CardHeader,
   CardTitle,
 } from '@/src/components/ui/card';
-import { resetPassword } from '@/src/lib/auth-client';
+import { resetPassword } from '@/src/utils/auth-client';
+import { SIGN_IN_URL } from '@/src/utils/consts';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Loader2 } from 'lucide-react';
 import { toast } from 'sonner';
@@ -54,7 +55,7 @@ export function ResetPasswordForm({ token }: ResetPasswordFormProps) {
         fetchOptions: {
           onSuccess: () => {
             toast.success('Password reset successfully');
-            router.push('/signin');
+            router.push(SIGN_IN_URL);
           },
           onRequest: () => {
             setLoading(true);

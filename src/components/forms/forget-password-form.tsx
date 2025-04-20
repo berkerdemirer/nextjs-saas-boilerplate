@@ -1,7 +1,7 @@
 'use client';
 
-import { InputField } from '@/src/components/form/fields/input-field';
-import { Form } from '@/src/components/form/form';
+import { InputField } from '@/src/components/form-fields/input-field';
+import { Form } from '@/src/components/forms/form';
 import { Button } from '@/src/components/ui/button';
 import {
   Card,
@@ -10,7 +10,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/src/components/ui/card';
-import { forgetPassword } from '@/src/lib/auth-client';
+import { forgetPassword } from '@/src/utils/auth-client';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Loader2 } from 'lucide-react';
 import { toast } from 'sonner';

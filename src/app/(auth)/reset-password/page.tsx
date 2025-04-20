@@ -1,4 +1,4 @@
-import { ResetPasswordForm } from '@/src/components/form/reset-password-form';
+import { ResetPasswordForm } from '@/src/components/forms/reset-password-form';
 import { appConfig } from '@/src/utils/app-config';
 import Link from 'next/link';
 

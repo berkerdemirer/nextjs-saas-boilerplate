@@ -1,4 +1,4 @@
-import { ForgetPasswordForm } from '@/src/components/form/forget-password-form';
+import { ForgetPasswordForm } from '@/src/components/forms/forget-password-form';
 import { appConfig } from '@/src/utils/app-config';
 import Link from 'next/link';
 

@@ -1,4 +1,4 @@
-import { SignupForm } from '@/src/components/form/signup-form';
+import { SignupForm } from '@/src/components/forms/signup-form';
 import { appConfig } from '@/src/utils/app-config';
 import Link from 'next/link';
 

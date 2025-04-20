@@ -1,7 +1,7 @@
 'use client';
 
-import { InputField } from '@/src/components/form/fields/input-field';
-import { Form } from '@/src/components/form/form';
+import { InputField } from '@/src/components/form-fields/input-field';
+import { Form } from '@/src/components/forms/form';
 import { Button } from '@/src/components/ui/button';
 import {
   Card,
@@ -11,7 +11,8 @@ import {
   CardTitle,
 } from '@/src/components/ui/card';
 import { useAuthFetchOptions } from '@/src/hooks/use-auth-fetch-options';
-import { signIn } from '@/src/lib/auth-client';
+import { signIn } from '@/src/utils/auth-client';
+import { SIGN_UP_URL } from '@/src/utils/consts';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Loader2 } from 'lucide-react';
 import { z } from 'zod';
@@ -127,7 +128,7 @@ export function LoginForm() {
             </Button>
             <div className="text-center text-sm">
               Don&apos;t have an account?{' '}
-              <Link href="/signup" className="underline underline-offset-4">
+              <Link href={SIGN_UP_URL} className="underline underline-offset-4">
                 Sign up
               </Link>
             </div>

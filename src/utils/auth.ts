@@ -9,7 +9,7 @@ import {
 import { resetPasswordEmail } from '@/src/components/email-templates/reset-password';
 import { verifyEmail } from '@/src/components/email-templates/verify-email';
 import { welcomeEmail } from '@/src/components/email-templates/welcome';
-import { sendEmail } from '@/src/lib/resend';
+import { sendEmail } from '@/src/utils/resend';
 import { ENV } from '@/src/utils/env';
 import { polar } from '@polar-sh/better-auth';
 import { Polar } from '@polar-sh/sdk';
@@ -39,9 +39,7 @@ export const auth = betterAuth({
     modelName: 'rateLimit',
   },
   emailVerification: {
-    callbackUrl: '/dashboard',
     autoSignInAfterVerification: true,
-    sendOnSignUp: true,
     sendVerificationEmail: async ({ user, url }) => {
       await sendEmail({
         to: user.email,

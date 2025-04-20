@@ -5,24 +5,6 @@ export interface NavItem {
   url: string;
   icon?: IconType;
 }
-
-export interface SocialLinks {
-  twitter?: string;
-  github?: string;
-  facebook?: string;
-  instagram?: string;
-  linkedin?: string;
-  youtube?: string;
-}
-
-export interface CompanyInfo {
-  name: string;
-  address: string;
-  email: string;
-  phone: string;
-  jurisdiction?: string;
-}
-
 export interface Config {
   appName: string;
   appUrl: string;
@@ -30,8 +12,21 @@ export interface Config {
   email: {
     from: string;
   };
-  social?: SocialLinks;
-  company?: CompanyInfo;
+  social?: {
+    twitter?: string;
+    github?: string;
+    facebook?: string;
+    instagram?: string;
+    linkedin?: string;
+    youtube?: string;
+  };
+  company?: {
+    name: string;
+    address: string;
+    email: string;
+    phone: string;
+    jurisdiction?: string;
+  };
   dashboard: {
     mainNavItems: NavItem[];
     secondaryNavItems: NavItem[];

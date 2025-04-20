@@ -2,7 +2,7 @@ import { Config } from '@/src/utils/types';
 
 export const appConfig: Config = {
   appName: 'My App',
-  appUrl: 'http://localhost:3001',
+  appUrl: 'http://localhost:3000',
   appDescription: 'This is my app description',
   email: {
     from: 'demirerberker@thesaasgrid.com',

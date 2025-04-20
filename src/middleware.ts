@@ -1,20 +1,25 @@
-import { auth } from '@/src/lib/auth';
-import { headers } from 'next/headers';
+import { SIGN_IN_URL } from '@/src/utils/consts';
 import { NextRequest, NextResponse } from 'next/server';
 
 export async function middleware(request: NextRequest) {
-  const session = await auth.api.getSession({
-    headers: await headers(),
-  });
+  const response = await fetch(
+    `${request.nextUrl.origin}/api/auth/get-session`,
+    {
+      headers: {
+        cookie: request.headers.get('cookie') || '',
+      },
+    },
+  );
+
+  const { data: session } = await response.json();
 
   if (!session) {
-    return NextResponse.redirect(new URL('/signin', request.url));
+    return NextResponse.redirect(new URL(SIGN_IN_URL, request.url));
   }
 
   return NextResponse.next();
 }
 
 export const config = {
-  runtime: 'nodejs',
   matcher: ['/dashboard/:path*'],
 };
