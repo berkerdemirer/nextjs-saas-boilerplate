@@ -6,7 +6,7 @@ const envSchema = z.object({
   RESEND_API_KEY: z.string(),
   BETTER_AUTH_SECRET: z.string(),
   POLAR_ACCESS_TOKEN: z.string(),
-  POLAR_WEBHOOK_SECRET: z.string().optional(),
+  POLAR_WEBHOOK_SECRET: z.string(),
   GOOGLE_CLIENT_ID: z.string(),
   GOOGLE_CLIENT_SECRET: z.string(),
 });

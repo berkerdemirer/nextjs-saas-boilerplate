@@ -10,16 +10,11 @@ import { resetPasswordEmail } from '@/src/components/email-templates/reset-passw
 import { verifyEmail } from '@/src/components/email-templates/verify-email';
 import { welcomeEmail } from '@/src/components/email-templates/welcome';
 import { ENV } from '@/src/utils/env';
+import { polar as polarClient } from '@/src/utils/polar-client';
 import { sendEmail } from '@/src/utils/resend';
 import { polar } from '@polar-sh/better-auth';
-import { Polar } from '@polar-sh/sdk';
 import { betterAuth } from 'better-auth';
 import { drizzleAdapter } from 'better-auth/adapters/drizzle';
-
-const client = new Polar({
-  accessToken: ENV.POLAR_ACCESS_TOKEN,
-  server: 'sandbox', // change this to 'production' when ready
-});
 
 export const auth = betterAuth({
   database: drizzleAdapter(db, {
@@ -88,6 +83,8 @@ export const auth = betterAuth({
   },
   plugins: [
     polar({
+      client: polarClient,
+      createCustomerOnSignUp: true,
       checkout: {
         enabled: true,
         products: async () => {
@@ -97,10 +94,19 @@ export const auth = betterAuth({
             slug,
           }));
         },
-        successUrl: '/success?checkout_id={CHECKOUT_ID}',
+        successUrl: '/payments/success?checkout_id={CHECKOUT_ID}',
       },
-      client,
-      createCustomerOnSignUp: true,
+      webhooks: {
+        secret: ENV.POLAR_WEBHOOK_SECRET,
+        onPayload: async (payload) => {
+          if (
+            payload.type === 'checkout.updated' &&
+            payload.data.status === 'succeeded'
+          ) {
+            console.log('paid');
+          }
+        },
+      },
     }),
   ],
 });

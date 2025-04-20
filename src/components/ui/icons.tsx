@@ -3,9 +3,11 @@
 import {
   type Icon,
   IconBrandGithub,
+  IconCheck,
   IconHome,
   IconInnerShadowTop,
   IconSettings,
+  IconShoppingCart,
   IconUsers,
 } from '@tabler/icons-react';
 
@@ -15,6 +17,8 @@ const iconMap = {
   settings: IconSettings,
   'brand-github': IconBrandGithub,
   'inner-shadow-top': IconInnerShadowTop,
+  'shopping-cart': IconShoppingCart,
+  check: IconCheck,
 } as const;
 
 export type IconType = keyof typeof iconMap;

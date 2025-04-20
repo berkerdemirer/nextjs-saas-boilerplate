@@ -11,7 +11,11 @@ export async function middleware(request: NextRequest) {
     },
   );
 
-  const session = await response.json();
+  if (!response.ok) {
+    return NextResponse.redirect(new URL(SIGN_IN_URL, request.url));
+  }
+
+  const session = await response.json().catch(() => null);
 
   if (!session) {
     return NextResponse.redirect(new URL(SIGN_IN_URL, request.url));
