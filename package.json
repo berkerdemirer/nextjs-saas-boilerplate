@@ -7,13 +7,15 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "auth:generate": "npx @better-auth/cli generate",
+    "test": "vitest",
+    "test:run": "vitest --run",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
     "db:push": "drizzle-kit push",
     "db:pull": "drizzle-kit pull",
     "db:seed": "tsx src/db/seed.ts",
-    "db:studio": "drizzle-kit studio"
+    "db:studio": "drizzle-kit studio",
+    "prepare": "husky"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.0.0",
@@ -53,19 +55,35 @@
     "@eslint/eslintrc": "^3",
     "@next/eslint-plugin-next": "^15.3.1",
     "@tailwindcss/postcss": "^4",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/react": "^16.3.0",
     "@trivago/prettier-plugin-sort-imports": "^5.2.2",
     "@types/node": "^22.0.0",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@vitejs/plugin-react": "^4.4.1",
     "drizzle-kit": "^0.31.0",
     "eslint": "^9",
     "eslint-config-next": "15.3.1",
     "eslint-config-prettier": "^10.0.2",
     "eslint-plugin-react-hooks": "^5.2.0",
+    "husky": "^9.1.7",
+    "jsdom": "^26.1.0",
     "prettier": "3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "tailwindcss": "^4",
     "tsx": "^4.19.3",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vite-tsconfig-paths": "^5.1.4",
+    "vitest": "^3.1.2"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,yml,yaml,md}": [
+      "prettier --write"
+    ]
   }
 }
