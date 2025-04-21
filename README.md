@@ -92,6 +92,8 @@ Key features implemented:
 
 You can customize email templates, authentication flows, and plugin configurations by modifying `src/lib/auth.ts` and the referenced email template components.
 
+NB! Resend won't deliver your email if your domain is not authorized, that's why `utils/app-config` email.from setting is important. Set something that is valid as your domain.
+
 ## Learn More
 
 To learn more about the technologies used in this boilerplate, refer to their respective documentation:
