@@ -6,7 +6,7 @@ import {
 } from '@/src/components/ui/card';
 import { appConfig } from '@/src/utils/app-config';
 
-export default function PrivacyPolicy() {
+export default function PrivacyPolicyPage() {
   return (
     <div className="container m-auto max-w-3xl py-10">
       <Card>

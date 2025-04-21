@@ -2,7 +2,7 @@ import { ForgetPasswordForm } from '@/src/components/forms/forget-password-form'
 import { appConfig } from '@/src/utils/app-config';
 import Link from 'next/link';
 
-export default function Page() {
+export default function ForgetPasswordPage() {
   return (
     <div className="bg-muted flex min-h-svh flex-col items-center justify-center gap-6 p-6 md:p-10">
       <div className="flex w-full max-w-sm flex-col gap-6">

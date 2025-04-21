@@ -108,6 +108,9 @@ importers:
       '@eslint/eslintrc':
         specifier: ^3
         version: 3.3.1
+      '@next/eslint-plugin-next':
+        specifier: ^15.3.1
+        version: 15.3.1
       '@tailwindcss/postcss':
         specifier: ^4
         version: 4.1.4
@@ -135,6 +138,9 @@ importers:
       eslint-config-prettier:
         specifier: ^10.0.2
         version: 10.1.2(eslint@9.25.0(jiti@2.4.2))
+      eslint-plugin-react-hooks:
+        specifier: ^5.2.0
+        version: 5.2.0(eslint@9.25.0(jiti@2.4.2))
       prettier:
         specifier: 3.5.3
         version: 3.5.3

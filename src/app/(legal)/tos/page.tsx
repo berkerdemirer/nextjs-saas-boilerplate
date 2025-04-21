@@ -6,7 +6,7 @@ import {
 } from '@/src/components/ui/card';
 import { appConfig } from '@/src/utils/app-config';
 
-export default function TermsOfService() {
+export default function TermsOfServicePage() {
   return (
     <div className="container m-auto max-w-3xl py-10">
       <Card>

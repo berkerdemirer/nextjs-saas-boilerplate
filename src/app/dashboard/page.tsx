@@ -1,9 +1,8 @@
 import { db } from '@/drizzle';
 import { product } from '@/drizzle/schema';
 import { Button } from '@/src/components/ui/button';
-import Link from 'next/link';
 
-export default async function Page() {
+export default async function DashboardPage() {
   const allProducts = await db.select().from(product);
 
   return (
@@ -13,11 +12,11 @@ export default async function Page() {
         {allProducts.map((product) => (
           <div key={product.id} className="flex flex-col gap-2">
             <h2 className="text-xl font-medium">{product.slug}</h2>
-            <Button asChild className="w-fit">
-              <Link href={`/api/auth/checkout/${product.slug}`}>
+            <form action={`/api/auth/checkout/${product.slug}`} method="GET">
+              <Button type="submit" className="w-fit">
                 Buy {product.slug}
-              </Link>
-            </Button>
+              </Button>
+            </form>
           </div>
         ))}
       </div>

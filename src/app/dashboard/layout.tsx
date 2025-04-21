@@ -3,7 +3,11 @@ import { DashboardSidebar } from '@/src/components/dashboard/sidebar';
 import { SidebarInset, SidebarProvider } from '@/src/components/ui/sidebar';
 import { appConfig } from '@/src/utils/app-config';
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default function DashboardLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <SidebarProvider
       style={

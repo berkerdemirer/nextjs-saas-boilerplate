@@ -2,7 +2,7 @@ import { ResetPasswordForm } from '@/src/components/forms/reset-password-form';
 import { appConfig } from '@/src/utils/app-config';
 import Link from 'next/link';
 
-export default function Page({
+export default function ResetPasswordPage({
   searchParams,
 }: {
   searchParams: { token?: string };
