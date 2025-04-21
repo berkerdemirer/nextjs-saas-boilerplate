@@ -77,7 +77,7 @@ Key features implemented:
 
 - **Database Integration:** Uses the `drizzleAdapter` with your PostgreSQL database (schema defined in `src/db/schema.ts`).
 - **Email & Password:** Standard email and password sign-up and sign-in are enabled.
-- **Social Login:** Google authentication is implemented for easy sign-in.
+- **Social Login:** Google authentication is implemented for easy sign-in. Define your client and secred ids in the .env
 - **Email Verification:**
   - Required for users signing up via email/password.
   - Verification emails are sent automatically on sign-up using the `src/components/email-templates/verify-email.tsx` template.
@@ -86,7 +86,8 @@ Key features implemented:
 - **Welcome Email:** A welcome email (`src/components/email-templates/welcome.tsx`) is sent when a new user record is created in the database.
 - **Polar Integration:**
   - Automatically creates Polar customers on user sign-up
-  - You should define the products in the db to dynamically fetch them for the better-auth/polar integration
+  - You should create a product in Polar and insert their details to the db to dynamically fetch them for the better-auth/polar integration (see `utils/auth`)
+  - Current Polar environment is set to sandbox
 - **Next.js Integration:** Uses the `nextCookies()` plugin for proper cookie handling within the Next.js framework.
 
 You can customize email templates, authentication flows, and plugin configurations by modifying `src/lib/auth.ts` and the referenced email template components.
